@@ -31,8 +31,9 @@ Busca el partido y cambia `resultado: null` por el marcador (local primero, visi
 En `clasificacion`, copia la tabla oficial **en orden de posición** y pon la fecha en `actualizada: "2026-10-12"`.
 Ids de los equipos: `iruna, sestao, lauro, cdb, lautada, np, askartza, larraina, leioa, urgara, donosti, urbatb`.
 
-## Publicarla (gratis)
-- **Netlify Drop**: entra en https://app.netlify.com/drop y arrastra la carpeta (sin `Recursos/`). Te da una URL al momento.
-- **GitHub Pages**: sube la carpeta a un repositorio y activa *Settings → Pages*.
+## Dónde está publicada
+En **https://wpiruna.github.io** (GitHub Pages, repositorio `wpiruna/wpiruna.github.io`).
+
+Para publicar un cambio: guardar, hacer commit y `git push`. GitHub la actualiza sola en uno o dos minutos.
 
 La carpeta `Recursos/` son los originales: no hace falta publicarla.
