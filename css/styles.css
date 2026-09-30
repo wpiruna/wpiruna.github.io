@@ -191,9 +191,10 @@ button.board:hover { border-color: var(--sky); }
 .cd-txt small { font-size: .82rem; color: var(--muted); }
 .cd-segs { display: flex; align-items: flex-start; gap: 8px; }
 .cd-segs > span { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-.cd-segs .cd-num { font-size: 3.4rem; }
+.cd-segs .cd-num { font-size: clamp(2.3rem, 11vw, 3.4rem); min-width: 2ch; text-align: center; }
 .cd-segs small { font-family: var(--display); font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.cd-segs > i { font-style: normal; font-family: var(--display); font-size: 2.4rem; line-height: 1; color: var(--dim); }
+.cd-segs > i { font-style: normal; font-family: var(--display); font-size: clamp(1.7rem, 8vw, 2.4rem); line-height: 1; color: var(--dim); }
+.cd-segs { gap: clamp(4px, 1.6vw, 8px); }
 
 /* Barra de temporada */
 .season-bar { display: flex; flex-direction: column; gap: 8px; }

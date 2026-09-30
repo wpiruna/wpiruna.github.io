@@ -166,15 +166,17 @@
         let ms = Math.max(0, n.dt - now());
         const d = Math.floor(ms / 864e5); ms -= d * 864e5;
         const h = Math.floor(ms / 36e5); ms -= h * 36e5;
-        const m = Math.floor(ms / 6e4);
+        const m = Math.floor(ms / 6e4); ms -= m * 6e4;
+        const sec = Math.floor(ms / 1e3);
         const pad = (x) => String(x).padStart(2, "0");
         cd.innerHTML = `<span class="cd-segs">
           <span><b class="cd-num">${pad(d)}</b><small>días</small></span><i>:</i>
           <span><b class="cd-num">${pad(h)}</b><small>horas</small></span><i>:</i>
-          <span><b class="cd-num">${pad(m)}</b><small>min</small></span></span>`;
+          <span><b class="cd-num">${pad(m)}</b><small>min</small></span><i>:</i>
+          <span><b class="cd-num">${pad(sec)}</b><small>seg</small></span></span>`;
       };
       tick();
-      cdTimer = setInterval(tick, 30000);
+      cdTimer = setInterval(tick, n.hasTime ? 1000 : 30000);
     }
 
     // Barra de temporada: un segmento por partido
