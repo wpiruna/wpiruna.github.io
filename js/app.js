@@ -411,7 +411,7 @@
       body += `<h3>Crónica</h3><div class="cronica">${p.cronica.titulo ? `<h4>${esc(p.cronica.titulo)}</h4>` : ""}${paras.map((t) => `<p>${esc(t)}</p>`).join("")}</div>`;
     }
     if (!p.played && !p.nota) {
-      body += `<p class="empty">${p.home ? "Jugamos en casa: ¡a llenar la grada!" : `Partido fuera, en la piscina de ${esc(T[p.local].nombre)}.`} La hora se confirmará en los días previos.</p>`;
+      body += `<p class="empty">${p.home ? "Jugamos en casa: ¡a llenar la grada!" : `Partido fuera, en la piscina de ${esc(T[p.local].nombre)}.`}${p.hora ? "" : " La hora se confirmará en los días previos."}</p>`;
     } else if (p.played && !p.cronica && !p.parciales && !p.goleadores) {
       body += `<p class="empty">La crónica de este partido llegará pronto.</p>`;
     }
