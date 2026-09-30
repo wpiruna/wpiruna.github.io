@@ -44,7 +44,7 @@ window.DATOS = {
 
   partidos: [
     // ---------- 1ª VUELTA ----------
-    { id: "p01", fecha: "2026-10-10", hora: null, local: "iruna",    visitante: "sestao",   resultado: null },
+    { id: "p01", fecha: "2026-10-10", hora: "15:00", local: "iruna",    visitante: "sestao",   resultado: null },
     { id: "p02", fecha: "2026-10-17", hora: null, local: "lauro",    visitante: "iruna",    resultado: null },
     { id: "p03", fecha: "2026-10-24", hora: null, local: "iruna",    visitante: "cdb",      resultado: null },
     { id: "p04", fecha: "2026-10-31", hora: null, local: "lautada",  visitante: "iruna",    resultado: null },
