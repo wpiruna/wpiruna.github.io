@@ -56,6 +56,9 @@
   }).sort((a, b) => a.dt - b.dt);
 
   const byId = Object.fromEntries(partidos.map((p) => [p.id, p]));
+  // Jornada de liga de cada uno de nuestros partidos (según D.jornadas)
+  const JORNADA = {};
+  (D.jornadas || []).forEach((j) => j.partidos.forEach((m) => { if (m.id) JORNADA[m.id] = j.n; }));
   const OUT_TXT = { W: "Victoria", D: "Empate", L: "Derrota" };
   const OUT_CHIP = { W: "chip-win", D: "chip-draw", L: "chip-loss" };
   const OUT_LETTER = { W: "V", D: "E", L: "D" };
@@ -346,7 +349,7 @@
     }
     $("#resultsList").innerHTML = played.map((p) => `
       <article class="card result-card ${p.outcome}" data-match="${p.id}" tabindex="0" role="button" aria-label="Ver ficha: ${esc(T[p.local].nombre)} ${p.resultado.local} - ${p.resultado.visitante} ${esc(T[p.visitante].nombre)}">
-        <div class="rc-top"><span>${whenText(p)} · ${p.vuelta}ª vuelta</span>${haChip(p)}</div>
+        <div class="rc-top"><span>${whenText(p)} · ${JORNADA[p.id] ? `Jornada ${JORNADA[p.id]}` : `${p.vuelta}ª vuelta`}</span>${haChip(p)}</div>
         <div class="rc-body">
           <div class="score-row">
             <div class="score-team">${crest(p.local)}<span>${esc(T[p.local].corto)}</span></div>
@@ -363,6 +366,74 @@
       </article>`).join("");
   }
 
+  /* ---------- JORNADAS ---------- */
+  const PARTIDOS_POR_JORNADA = Object.keys(T).length / 2;
+  function jornadaMatch(j, m) {
+    const ours = m.id ? byId[m.id] : null;
+    if (m.id && !ours) return "";
+    const L = ours ? ours.local : m.local, V = ours ? ours.visitante : m.visitante;
+    if (!T[L] || !T[V]) return "";
+    const res = ours ? (ours.played ? ours.resultado : null) : (m.resultado && m.resultado.local != null && m.resultado.visitante != null ? m.resultado : null);
+    const day = ours ? ours.day : parseDay(m.fecha || j.fecha);
+    const hora = ours ? (ours.hora ? `${ours.hora} h` : ours.franja ? ours.franja : "") : (m.hora ? `${m.hora} h` : "");
+    const lugar = ours ? ours.piscina : m.lugar;
+    const moved = ours && ours.fecha !== j.fecha;
+    let side;
+    if (res) {
+      const wl = res.local > res.visitante, wv = res.visitante > res.local;
+      side = `<span class="jm-score"><b class="${wl ? "win" : ""}">${res.local}</b><b class="${wv ? "win" : ""}">${res.visitante}</b></span>`;
+    } else {
+      side = `<span class="jm-info">${lugar ? `<span class="jm-place">${esc(lugar)}</span>` : ""}${ymd(day) !== j.fecha ? `<span>${DIAS_CORTOS[day.getDay()]} ${day.getDate()} ${MESES[day.getMonth()].slice(0, 3)}</span>` : ""}${hora ? `<span class="jm-time">${esc(hora)}</span>` : ""}</span>`;
+    }
+    const teams = `<span class="jm-teams">
+        <span class="jm-team">${crest(L)}<span>${esc(T[L].nombre)}</span></span>
+        <span class="jm-team">${crest(V)}<span>${esc(T[V].nombre)}</span></span>
+        ${moved ? `<span class="jm-moved">Se juega el ${DIAS[day.getDay()]} ${day.getDate()} de ${MESES[day.getMonth()]}</span>` : ""}
+      </span>`;
+    return ours
+      ? `<button type="button" class="jm us" data-match="${ours.id}" aria-label="Ver ficha: ${esc(T[L].nombre)} contra ${esc(T[V].nombre)}">${teams}${side}</button>`
+      : `<div class="jm">${teams}${side}</div>`;
+  }
+
+  function renderJornadas() {
+    const today = startOfDay(now());
+    const js = D.jornadas || [];
+    // La jornada "actual": la primera cuya fecha (o la de nuestro partido) no ha pasado
+    let cur = js.findIndex((j) => {
+      const ours = j.partidos.map((m) => m.id && byId[m.id]).filter(Boolean);
+      return parseDay(j.fecha) >= today || ours.some((p) => !p.played && p.day >= today);
+    });
+    if (cur === -1) cur = js.length - 1;
+    let html = "";
+    js.forEach((j, i) => {
+      if (i === 0 || (js[i - 1].n <= 11 && j.n > 11)) html += `<div class="vuelta-sep">${j.n <= 11 ? 1 : 2}ª vuelta</div>`;
+      const d = parseDay(j.fecha);
+      const ours = j.partidos.map((m) => m.id && byId[m.id]).find(Boolean);
+      let chip = "";
+      if (i === cur) chip = `<span class="chip chip-home">Próxima</span>`;
+      else if (ours && ours.played) chip = `<span class="chip ${OUT_CHIP[ours.outcome]}">${OUT_LETTER[ours.outcome]} ${ours.ours}–${ours.theirs}</span>`;
+      const rows = j.partidos.map((m) => jornadaMatch(j, m)).join("");
+      const missing = j.partidos.length < PARTIDOS_POR_JORNADA;
+      html += `
+        <details class="jornada"${i === cur ? " open" : ""}>
+          <summary>
+            <span class="j-num">Jornada ${j.n}</span>
+            <span class="j-date">${cap(DIAS_CORTOS[d.getDay()])} ${d.getDate()} ${MESES[d.getMonth()].slice(0, 3)}</span>
+            ${chip}
+            <svg class="j-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </summary>
+          <div class="j-body">
+            ${rows}
+            ${missing ? `<p class="j-note">Los demás partidos de esta jornada aún no están cargados.</p>` : ""}
+          </div>
+        </details>`;
+    });
+    $("#jornadasList").innerHTML = html || `<p class="empty">Todavía no hay jornadas cargadas.</p>`;
+    // Llevar a la vista la jornada que toca
+    const open = $("#jornadasList details[open]");
+    if (open && cur > 0) setTimeout(() => open.scrollIntoView({ block: "start" }), 0);
+  }
+
   /* ---------- CLASIFICACIÓN ---------- */
   function renderStandings() {
     const c = D.clasificacion;
@@ -372,8 +443,10 @@
       : "Aún sin jornadas disputadas";
     const rows = c.filas.map((f, i) => {
       const dg = (f.gf || 0) - (f.gc || 0);
-      return `<tr class="${f.equipo === US ? "us" : ""}${!empty && i === 0 ? " top" : ""}">
-        <td class="c-pos"><b>${empty ? "–" : i + 1}</b></td>
+      // Zonas: el primero (verde) y los dos últimos, que descienden (rojo)
+      const zone = i === 0 ? " zone-up" : i >= c.filas.length - 2 ? " zone-down" : "";
+      return `<tr class="${f.equipo === US ? "us" : ""}${zone}">
+        <td class="c-pos"><b>${i + 1}</b></td>
         <td class="c-team"><div>${crest(f.equipo)}<span class="n-long">${esc(T[f.equipo] ? T[f.equipo].nombre : f.equipo)}</span><span class="n-short">${esc(T[f.equipo] ? T[f.equipo].corto : f.equipo)}</span></div></td>
         <td>${f.pj}</td>
         <td class="c-opt">${f.g}</td><td class="c-opt">${f.e}</td><td class="c-opt">${f.p}</td>
@@ -387,6 +460,47 @@
 
   /* ---------- FICHA DE PARTIDO ---------- */
   const dlg = $("#matchDialog");
+
+  // Cartel con foto en duotono (si el partido tiene `cartel` en datos.js)
+  function cartel(p) {
+    const c = p.cartel, L = p.local, V = p.visitante;
+    const escudo = (id) => id === US
+      ? `<img class="ct-crest us" src="img/logo.png" alt="">`
+      : T[id].escudo ? `<img class="ct-crest" src="${esc(T[id].escudo)}" alt="">` : `<span class="ct-crest">${esc(T[id].sigla)}</span>`;
+    const nL = T[L].corto, nV = T[V].corto;
+    // Los nombres van en una línea: cuanto más largos, más pequeños
+    const size = Math.min(6.5, 84 / (nL.length + nV.length)).toFixed(2);
+    const center = p.played ? `<span class="ct-score">${p.resultado.local}–${p.resultado.visitante}</span>` : `<span class="ct-vs">VS</span>`;
+    const j = JORNADA[p.id];
+    const lema = c.lema || (p.played
+      ? OUT_TXT[p.outcome]
+      : p.home ? "¡A llenar\nla grada!" : "Lejos de casa,\nigual de fuertes");
+    const d = p.day;
+    const cuando = `${DIAS_CORTOS[d.getDay()]} ${d.getDate()} ${MESES[d.getMonth()].slice(0, 3)} · ${p.hora || (p.franja ? `por la ${p.franja.toLowerCase()}` : "hora por confirmar")}`;
+    const donde = p.piscina ? `Piscina ${p.piscina}` : p.home ? "Piscina por confirmar" : `En la piscina del ${T[L].corto}`;
+    return `
+      <div class="cartel${p.home ? " home" : ""}">
+        <img class="ct-foto" src="${esc(c.foto)}" alt="" style="object-position:${esc(c.encuadre || "50% 40%")}">
+        <div class="ct-tinte"></div>
+        <div class="ct-sombra"></div>
+        <div class="ct-top">
+          <div class="ct-jornada"><span>${j ? "Jornada" : `${p.vuelta}ª vuelta`}</span>${j ? `<b>${String(j).padStart(2, "0")}</b>` : ""}</div>
+          <div class="ct-comp"><span>${esc(D.competicion)}</span><span>Temporada ${esc(D.temporada.replace(/^20/, ""))}</span></div>
+        </div>
+        <div class="ct-bottom">
+          <div class="ct-lema">${esc(lema).replace(/\n/g, "<br>")}</div>
+          <div class="ct-teams" id="mdTitle">
+            ${escudo(L)}
+            <div class="ct-names" style="font-size:${size}cqw"><span>${esc(nL)}</span>${center}<span>${esc(nV)}</span></div>
+            ${escudo(V)}
+          </div>
+          <div class="ct-info">
+            <div><b>${esc(cuando)}</b><span>${esc(donde)}</span></div>
+            <span class="ct-ha">${p.home ? "En casa" : "Fuera"}</span>
+          </div>
+        </div>
+      </div>`;
+  }
   function openMatch(id) {
     const p = byId[id];
     if (!p) return;
@@ -421,9 +535,9 @@
       <button type="button" class="btn btn-ghost" data-share="${p.id}">Compartir</button>
     </div>`;
 
-    $("#matchBody").innerHTML = `
+    $("#matchBody").innerHTML = (p.cartel && p.cartel.foto ? cartel(p) : `
       <div class="md-hero">
-        <div class="md-comp">${esc(D.competicion)} · ${p.vuelta}ª vuelta</div>
+        <div class="md-comp">${esc(D.competicion)} · ${JORNADA[p.id] ? `Jornada ${JORNADA[p.id]}` : `${p.vuelta}ª vuelta`}</div>
         <div class="md-teams">
           <div class="md-team">${crest(L)}<b>${esc(T[L].nombre)}</b></div>
           <div class="md-center">${center}</div>
@@ -431,7 +545,7 @@
         </div>
         <div class="md-when">${whenText(p)} · ${timeText(p)}${p.piscina ? " · " + esc(p.piscina) : ""}</div>
         <div class="md-chips">${haChip(p)}${p.played ? `<span class="chip ${OUT_CHIP[p.outcome]}">${OUT_TXT[p.outcome]}</span>` : ""}</div>
-      </div>
+      </div>`) + `
       <div class="md-body">${body}</div>`;
     if (!dlg.open) dlg.showModal();
     $(".sheet-inner", dlg).scrollTop = 0;
@@ -486,7 +600,7 @@
   }
 
   /* ---------- Router ---------- */
-  const VIEWS = ["inicio", "calendario", "resultados", "clasificacion"];
+  const VIEWS = ["inicio", "calendario", "resultados", "jornadas", "clasificacion"];
   let currentView = "inicio";
   const rendered = {};
   function showView(v) {
@@ -497,6 +611,7 @@
       if (v === "inicio") renderHome();
       if (v === "calendario") setCalMode(calMode);
       if (v === "resultados") renderResults();
+      if (v === "jornadas") renderJornadas();
       if (v === "clasificacion") renderStandings();
       rendered[v] = true;
     }

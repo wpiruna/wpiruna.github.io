@@ -27,6 +27,7 @@
       <a href="#inicio" data-nav="inicio">Inicio</a>
       <a href="#calendario" data-nav="calendario">Calendario</a>
       <a href="#resultados" data-nav="resultados">Resultados</a>
+      <a href="#jornadas" data-nav="jornadas">Jornadas</a>
       <a href="#clasificacion" data-nav="clasificacion">Clasificación</a>
     </nav>
     <span class="season-tag">1ª MASC · <span data-temporada-corta></span></span>
@@ -142,6 +143,17 @@
       </div>
     </section>
 
+    <!-- JORNADAS -->
+    <section class="view" id="view-jornadas" data-view="jornadas" hidden>
+      <div class="wrap">
+        <div class="view-head">
+          <h1 class="page-title">Jornadas</h1>
+          <p class="muted">Todos los partidos de la liga, jornada a jornada</p>
+        </div>
+        <div id="jornadasList" class="jornadas"></div>
+      </div>
+    </section>
+
     <!-- CLASIFICACIÓN -->
     <section class="view" id="view-clasificacion" data-view="clasificacion" hidden>
       <div class="wrap">
@@ -167,6 +179,10 @@
             </thead>
             <tbody></tbody>
           </table>
+        </div>
+        <div class="stand-legend">
+          <span><i style="background: var(--win)"></i>Primer clasificado</span>
+          <span><i style="background: var(--loss)"></i>Descenso</span>
         </div>
         <label class="toggle-cols">
           <input type="checkbox" id="showAllCols"> Ver todas las columnas
@@ -194,9 +210,13 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.8 10.5c3 1.2 5.6.2 8.2-2.9M12 20.5c-.8-4.2.6-7.3 4.7-9.7M14 3.8c-.4 3 .8 5.5 3.2 7"/></svg>
       <span>Resultados</span>
     </a>
+    <a href="#jornadas" data-nav="jornadas">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M7.5 9h9M7.5 12.5h9M7.5 16h5"/></svg>
+      <span>Jornadas</span>
+    </a>
     <a href="#clasificacion" data-nav="clasificacion">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V13h4.5v7M9.75 20V8h4.5v12M15.5 20v-9.5H20V20M3 20h18"/></svg>
-      <span>Tabla</span>
+      <span class="lbl-long">Clasificación</span><span class="lbl-short">Clasif</span>
     </a>
   </nav>
 

@@ -27,6 +27,15 @@ Busca el partido y cambia `resultado: null` por el marcador (local primero, visi
 - `piscina: "Piscinas de ..."`: opcional, muestra el lugar.
 - Victorias, empates, derrotas, racha y goles se calculan solos.
 
+### Poner un cartel a un partido
+Copia la foto (optimizada, ~1200 px de ancho) a `img/carteles/` y añade al partido:
+
+```js
+cartel: { foto: "img/carteles/j04.jpg", encuadre: "50% 40%", lema: "¡Vamos Iruña!" }
+```
+
+`encuadre` (qué parte de la foto se ve) y `lema` son opcionales. Sin cartel, la ficha se ve como antes.
+
 ### Actualizar la clasificación
 En `clasificacion`, copia la tabla oficial **en orden de posición** y pon la fecha en `actualizada: "2026-10-12"`.
 Ids de los equipos: `iruna, sestao, lauro, cdb, lautada, np, askartza, larraina, leioa, urgara, donosti, urbatb`.
