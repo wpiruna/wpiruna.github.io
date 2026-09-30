@@ -45,4 +45,6 @@ En **https://wpiruna.github.io** (GitHub Pages, repositorio `wpiruna/wpiruna.git
 
 Para publicar un cambio: guardar, hacer commit y `git push`. GitHub la actualiza sola en uno o dos minutos.
 
+Antes de publicar, cambia la versión `?v=...` de los tres enlaces de `index.html` (`styles.css`, `datos.js`, `app.js`), por ejemplo a la fecha del día. Así los móviles y la app instalada descargan los archivos nuevos en vez de usar los que tenían guardados.
+
 La carpeta `Recursos/` son los originales: no hace falta publicarla.
