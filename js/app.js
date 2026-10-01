@@ -469,12 +469,14 @@
       : T[id].escudo ? `<img class="ct-crest" src="${esc(T[id].escudo)}" alt="">` : `<span class="ct-crest">${esc(T[id].sigla)}</span>`;
     const nL = T[L].corto, nV = T[V].corto;
     // Los nombres van en una línea: cuanto más largos, más pequeños
-    const size = Math.min(6.5, 84 / (nL.length + nV.length)).toFixed(2);
+    const size = Math.min(6.5, 76 / (nL.length + nV.length)).toFixed(2);
     const center = p.played ? `<span class="ct-score">${p.resultado.local}–${p.resultado.visitante}</span>` : `<span class="ct-vs">VS</span>`;
     const j = JORNADA[p.id];
     const lema = c.lema || (p.played
       ? OUT_TXT[p.outcome]
       : p.home ? "¡A llenar\nla grada!" : "Lejos de casa,\nigual de fuertes");
+    // Frases largas: letra más pequeña para que cada línea quepa a lo ancho
+    const lemaSize = Math.min(10, 145 / Math.max(...lema.split("\n").map((l) => l.length))).toFixed(2);
     const d = p.day;
     const cuando = `${DIAS_CORTOS[d.getDay()]} ${d.getDate()} ${MESES[d.getMonth()].slice(0, 3)} · ${p.hora || (p.franja ? `por la ${p.franja.toLowerCase()}` : "hora por confirmar")}`;
     const donde = p.piscina ? `Piscina ${p.piscina}` : p.home ? "Piscina por confirmar" : `En la piscina del ${T[L].corto}`;
@@ -488,7 +490,7 @@
           <div class="ct-comp"><span>${esc(D.competicion)}</span><span>Temporada ${esc(D.temporada.replace(/^20/, ""))}</span></div>
         </div>
         <div class="ct-bottom">
-          <div class="ct-lema">${esc(lema).replace(/\n/g, "<br>")}</div>
+          <div class="ct-lema" style="font-size:${lemaSize}cqw">${esc(lema).replace(/\n/g, "<br>")}</div>
           <div class="ct-teams" id="mdTitle">
             ${escudo(L)}
             <div class="ct-names" style="font-size:${size}cqw"><span>${esc(nL)}</span>${center}<span>${esc(nV)}</span></div>
