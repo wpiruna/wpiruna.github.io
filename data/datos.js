@@ -72,7 +72,7 @@ window.DATOS = {
     { id: "p16", fecha: "2027-02-13", hora: null, local: "np",       visitante: "iruna",    resultado: null },
     { id: "p17", fecha: "2027-02-20", hora: null, local: "iruna",    visitante: "askartza", resultado: null },
     { id: "p18", fecha: "2027-02-27", hora: null, local: "larraina", visitante: "iruna",    resultado: null },
-    { id: "p19", fecha: "2027-03-06", hora: null, local: "iruna",    visitante: "leioa",    resultado: null },
+    { id: "p19", fecha: "2026-11-15", hora: null, local: "iruna",    visitante: "leioa",    resultado: null },
     { id: "p20", fecha: "2027-03-13", hora: null, local: "urgara",   visitante: "iruna",    resultado: null },
     { id: "p21", fecha: "2027-03-20", hora: null, local: "donosti",  visitante: "iruna",    resultado: null },
     { id: "p22", fecha: "2027-04-10", hora: null, local: "iruna",    visitante: "urbatb",   resultado: null }
