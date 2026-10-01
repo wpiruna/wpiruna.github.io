@@ -398,11 +398,9 @@
   function renderJornadas() {
     const today = startOfDay(now());
     const js = D.jornadas || [];
-    // La jornada "actual": la primera cuya fecha (o la de nuestro partido) no ha pasado
-    let cur = js.findIndex((j) => {
-      const ours = j.partidos.map((m) => m.id && byId[m.id]).filter(Boolean);
-      return parseDay(j.fecha) >= today || ours.some((p) => !p.played && p.day >= today);
-    });
+    // La jornada "actual": la primera cuya fecha de liga no ha pasado
+    // (un partido nuestro aplazado no la retiene: ya avisa con "Se juega el…")
+    let cur = js.findIndex((j) => parseDay(j.fecha) >= today);
     if (cur === -1) cur = js.length - 1;
     let html = "";
     js.forEach((j, i) => {

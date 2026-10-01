@@ -82,7 +82,7 @@ window.DATOS = {
   ],
 
   /*
-   * JORNADAS — todos los partidos de la liga, copiados de Clupik (1ª vuelta leída el 30/09/2026).
+   * JORNADAS — todos los partidos de la liga, copiados de Clupik (1ª vuelta leída el 30/09/2026, 2ª vuelta el 01/10/2026).
    * Cada jornada: n (número), fecha (la de la liga) y partidos.
    *   { id: "p05" }  → nuestro partido: se toma de la lista de arriba (no repetir datos).
    *   Otros partidos: { local, visitante, lugar, fecha, hora, resultado: { local: 10, visitante: 7 } }
@@ -177,20 +177,94 @@ window.DATOS = {
       { id: "p11" },
       { local: "donosti", visitante: "urgara",  lugar: "Altza Kiroldegia", hora: null, resultado: null }
     ] },
-    { n: 12, fecha: "2027-01-16", partidos: [{ id: "p13" }] },
-    { n: 13, fecha: "2027-01-23", partidos: [
-      { id: "p14" },
-      { local: "donosti", visitante: "sestao",  lugar: "Altza Kiroldegia", fecha: "2026-10-17", hora: null, resultado: null }
+    { n: 12, fecha: "2027-01-16", partidos: [
+      { id: "p13" },
+      { local: "cdb",     visitante: "larraina", lugar: "Club Deportivo Bilbao", hora: null, resultado: null },
+      { local: "urgara",  visitante: "np",      lugar: "Azken Portu Kiroldegia", hora: null, resultado: null },
+      { local: "lauro",   visitante: "leioa",   lugar: "Behekosoloa Kiroldegia", hora: null, resultado: null },
+      { local: "lautada", visitante: "askartza", lugar: "Complejo Deportivo Mendizorrotza", hora: null, resultado: null },
+      { local: "urbatb",  visitante: "donosti", lugar: "Orbea Kiroldegia", hora: null, resultado: null }
     ] },
-    { n: 14, fecha: "2027-01-30", partidos: [{ id: "p12" }] },
-    { n: 15, fecha: "2027-02-06", partidos: [{ id: "p15" }] },
-    { n: 16, fecha: "2027-02-13", partidos: [{ id: "p16" }] },
-    { n: 17, fecha: "2027-02-20", partidos: [{ id: "p17" }] },
-    { n: 18, fecha: "2027-02-27", partidos: [{ id: "p18" }] },
-    { n: 19, fecha: "2027-03-06", partidos: [{ id: "p19" }] },
-    { n: 20, fecha: "2027-03-13", partidos: [{ id: "p20" }] },
-    { n: 21, fecha: "2027-03-20", partidos: [{ id: "p21" }] },
-    { n: 22, fecha: "2027-04-10", partidos: [{ id: "p22" }] }
+    { n: 13, fecha: "2027-01-23", partidos: [
+      { local: "donosti", visitante: "sestao",  lugar: "Altza Kiroldegia", fecha: "2026-10-17", hora: null, resultado: null },
+      { local: "askartza", visitante: "np",      lugar: "Claret Askartza Kiroldegia", hora: null, resultado: null },
+      { local: "larraina", visitante: "lautada", lugar: "C.D. Larraina", hora: null, resultado: null },
+      { local: "leioa",   visitante: "cdb",     lugar: "Sakoneta Kiroldegia", hora: null, resultado: null },
+      { local: "urbatb",  visitante: "urgara",  lugar: "Orbea Kiroldegia", hora: null, resultado: null },
+      { id: "p14" }
+    ] },
+    { n: 14, fecha: "2027-01-30", partidos: [
+      { id: "p12" },
+      { local: "urgara",  visitante: "askartza", lugar: "Azken Portu Kiroldegia", hora: null, resultado: null },
+      { local: "sestao",  visitante: "urbatb",  lugar: "Polideportivo Las Llanas", hora: null, resultado: null },
+      { local: "np",      visitante: "larraina", lugar: "P.M. Muelle de Txurruka", hora: null, resultado: null },
+      { local: "lauro",   visitante: "donosti", lugar: "Behekosoloa Kiroldegia", hora: null, resultado: null },
+      { local: "lautada", visitante: "leioa",   lugar: "Complejo Deportivo Mendizorrotza", hora: null, resultado: null }
+    ] },
+    { n: 15, fecha: "2027-02-06", partidos: [
+      { local: "larraina", visitante: "askartza", lugar: "C.D. Larraina", hora: null, resultado: null },
+      { local: "sestao",  visitante: "urgara",  lugar: "Polideportivo Las Llanas", hora: null, resultado: null },
+      { local: "leioa",   visitante: "np",      lugar: "Sakoneta Kiroldegia", hora: null, resultado: null },
+      { local: "urbatb",  visitante: "lauro",   lugar: "Orbea Kiroldegia", hora: null, resultado: null },
+      { local: "donosti", visitante: "cdb",     lugar: "Altza Kiroldegia", hora: null, resultado: null },
+      { id: "p15" }
+    ] },
+    { n: 16, fecha: "2027-02-13", partidos: [
+      { local: "askartza", visitante: "leioa",   lugar: "Claret Askartza Kiroldegia", hora: null, resultado: null },
+      { local: "cdb",     visitante: "urbatb",  lugar: "Club Deportivo Bilbao", hora: null, resultado: null },
+      { local: "urgara",  visitante: "larraina", lugar: "Azken Portu Kiroldegia", hora: null, resultado: null },
+      { id: "p16" },
+      { local: "lauro",   visitante: "sestao",  lugar: "Behekosoloa Kiroldegia", hora: null, resultado: null },
+      { local: "lautada", visitante: "donosti", lugar: "Complejo Deportivo Mendizorrotza", hora: null, resultado: null }
+    ] },
+    { n: 17, fecha: "2027-02-20", partidos: [
+      { local: "sestao",  visitante: "cdb",     lugar: "Polideportivo Las Llanas", hora: null, resultado: null },
+      { local: "lauro",   visitante: "urgara",  lugar: "Behekosoloa Kiroldegia", hora: null, resultado: null },
+      { local: "leioa",   visitante: "larraina", lugar: "Sakoneta Kiroldegia", hora: null, resultado: null },
+      { local: "urbatb",  visitante: "lautada", lugar: "Orbea Kiroldegia", hora: null, resultado: null },
+      { local: "donosti", visitante: "np",      lugar: "Altza Kiroldegia", hora: null, resultado: null },
+      { id: "p17" }
+    ] },
+    { n: 18, fecha: "2027-02-27", partidos: [
+      { local: "askartza", visitante: "donosti", lugar: "Claret Askartza Kiroldegia", hora: null, resultado: null },
+      { local: "cdb",     visitante: "lauro",   lugar: "Club Deportivo Bilbao", hora: null, resultado: null },
+      { id: "p18" },
+      { local: "urgara",  visitante: "leioa",   lugar: "Azken Portu Kiroldegia", hora: null, resultado: null },
+      { local: "np",      visitante: "urbatb",  lugar: "P.M. Muelle de Txurruka", hora: null, resultado: null },
+      { local: "lautada", visitante: "sestao",  lugar: "Complejo Deportivo Mendizorrotza", hora: null, resultado: null }
+    ] },
+    { n: 19, fecha: "2027-03-06", partidos: [
+      { local: "cdb",     visitante: "urgara",  lugar: "Club Deportivo Bilbao", hora: null, resultado: null },
+      { local: "sestao",  visitante: "np",      lugar: "Polideportivo Las Llanas", hora: null, resultado: null },
+      { local: "lauro",   visitante: "lautada", lugar: "Behekosoloa Kiroldegia", hora: null, resultado: null },
+      { local: "urbatb",  visitante: "askartza", lugar: "Orbea Kiroldegia", hora: null, resultado: null },
+      { local: "donosti", visitante: "larraina", lugar: "Altza Kiroldegia", hora: null, resultado: null },
+      { id: "p19" }
+    ] },
+    { n: 20, fecha: "2027-03-13", partidos: [
+      { local: "askartza", visitante: "sestao",  lugar: "Claret Askartza Kiroldegia", hora: null, resultado: null },
+      { local: "larraina", visitante: "urbatb",  lugar: "C.D. Larraina", hora: null, resultado: null },
+      { id: "p20" },
+      { local: "np",      visitante: "lauro",   lugar: "P.M. Muelle de Txurruka", hora: null, resultado: null },
+      { local: "lautada", visitante: "cdb",     lugar: "Complejo Deportivo Mendizorrotza", hora: null, resultado: null },
+      { local: "leioa",   visitante: "donosti", lugar: "Sakoneta Kiroldegia", hora: null, resultado: null }
+    ] },
+    { n: 21, fecha: "2027-03-20", partidos: [
+      { local: "cdb",     visitante: "np",      lugar: "Club Deportivo Bilbao", hora: null, resultado: null },
+      { local: "sestao",  visitante: "larraina", lugar: "Polideportivo Las Llanas", hora: null, resultado: null },
+      { local: "lauro",   visitante: "askartza", lugar: "Behekosoloa Kiroldegia", hora: null, resultado: null },
+      { local: "lautada", visitante: "urgara",  lugar: "Complejo Deportivo Mendizorrotza", hora: null, resultado: null },
+      { local: "urbatb",  visitante: "leioa",   lugar: "Orbea Kiroldegia", hora: null, resultado: null },
+      { id: "p21" }
+    ] },
+    { n: 22, fecha: "2027-04-10", partidos: [
+      { local: "askartza", visitante: "cdb",     lugar: "Claret Askartza Kiroldegia", hora: null, resultado: null },
+      { local: "larraina", visitante: "lauro",   lugar: "C.D. Larraina", hora: null, resultado: null },
+      { local: "urgara",  visitante: "donosti", lugar: "Azken Portu Kiroldegia", hora: null, resultado: null },
+      { local: "np",      visitante: "lautada", lugar: "P.M. Muelle de Txurruka", hora: null, resultado: null },
+      { local: "leioa",   visitante: "sestao",  lugar: "Sakoneta Kiroldegia", hora: null, resultado: null },
+      { id: "p22" }
+    ] }
   ],
 
   /*
