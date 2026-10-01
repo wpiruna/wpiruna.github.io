@@ -24,6 +24,15 @@
   const parseDay = (s) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
   const startOfDay = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
 
+  // Enlace a Google Maps ("Cómo llegar") si la piscina está en D.piscinas
+  const PIN = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></svg>`;
+  function lugar(nombre, texto = nombre) {
+    const q = nombre && (D.piscinas || {})[nombre];
+    if (!q) return esc(texto);
+    const url = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(q);
+    return `<a class="map-link" href="${url}" target="_blank" rel="noopener" aria-label="Cómo llegar a ${esc(nombre)} (Google Maps)">${PIN}<span>${esc(texto)}</span></a>`;
+  }
+
   function crest(id) {
     if (id === US) return `<span class="crest us"><img src="img/logo.png" alt=""></span>`;
     if (T[id].escudo) return `<span class="crest has-img"><img src="${esc(T[id].escudo)}" alt=""></span>`;
@@ -376,14 +385,14 @@
     const res = ours ? (ours.played ? ours.resultado : null) : (m.resultado && m.resultado.local != null && m.resultado.visitante != null ? m.resultado : null);
     const day = ours ? ours.day : parseDay(m.fecha || j.fecha);
     const hora = ours ? (ours.hora ? `${ours.hora} h` : ours.franja ? ours.franja : "") : (m.hora ? `${m.hora} h` : "");
-    const lugar = ours ? ours.piscina : m.lugar;
+    const sitio = ours ? ours.piscina : m.lugar;
     const moved = ours && ours.fecha !== j.fecha;
     let side;
     if (res) {
       const wl = res.local > res.visitante, wv = res.visitante > res.local;
       side = `<span class="jm-score"><b class="${wl ? "win" : ""}">${res.local}</b><b class="${wv ? "win" : ""}">${res.visitante}</b></span>`;
     } else {
-      side = `<span class="jm-info">${lugar ? `<span class="jm-place">${esc(lugar)}</span>` : ""}${ymd(day) !== j.fecha ? `<span>${DIAS_CORTOS[day.getDay()]} ${day.getDate()} ${MESES[day.getMonth()].slice(0, 3)}</span>` : ""}${hora ? `<span class="jm-time">${esc(hora)}</span>` : ""}</span>`;
+      side = `<span class="jm-info">${sitio ? `<span class="jm-place">${lugar(sitio)}</span>` : ""}${ymd(day) !== j.fecha ? `<span>${DIAS_CORTOS[day.getDay()]} ${day.getDate()} ${MESES[day.getMonth()].slice(0, 3)}</span>` : ""}${hora ? `<span class="jm-time">${esc(hora)}</span>` : ""}</span>`;
     }
     const teams = `<span class="jm-teams">
         <span class="jm-team">${crest(L)}<span>${esc(T[L].nombre)}</span></span>
@@ -391,7 +400,7 @@
         ${moved ? `<span class="jm-moved">Se juega el ${DIAS[day.getDay()]} ${day.getDate()} de ${MESES[day.getMonth()]}</span>` : ""}
       </span>`;
     return ours
-      ? `<button type="button" class="jm us" data-match="${ours.id}" aria-label="Ver ficha: ${esc(T[L].nombre)} contra ${esc(T[V].nombre)}">${teams}${side}</button>`
+      ? `<div class="jm us" data-match="${ours.id}" role="button" tabindex="0" aria-label="Ver ficha: ${esc(T[L].nombre)} contra ${esc(T[V].nombre)}">${teams}${side}</div>`
       : `<div class="jm">${teams}${side}</div>`;
   }
 
@@ -477,7 +486,7 @@
     const lemaSize = Math.min(10, 145 / Math.max(...lema.split("\n").map((l) => l.length))).toFixed(2);
     const d = p.day;
     const cuando = `${DIAS_CORTOS[d.getDay()]} ${d.getDate()} ${MESES[d.getMonth()].slice(0, 3)} · ${p.hora || (p.franja ? `por la ${p.franja.toLowerCase()}` : "hora por confirmar")}`;
-    const donde = p.piscina ? `Piscina ${p.piscina}` : p.home ? "Piscina por confirmar" : `En la piscina del ${T[L].corto}`;
+    const donde = p.piscina ? (p.home ? `Piscina ${p.piscina}` : p.piscina) : p.home ? "Piscina por confirmar" : `En la piscina del ${T[L].corto}`;
     return `
       <div class="cartel${p.home ? " home" : ""}">
         <img class="ct-foto" src="${esc(c.foto)}" alt="" style="object-position:${esc(c.encuadre || "50% 40%")}">
@@ -495,7 +504,7 @@
             ${escudo(V)}
           </div>
           <div class="ct-info">
-            <div><b>${esc(cuando)}</b><span>${esc(donde)}</span></div>
+            <div><b>${esc(cuando)}</b><span>${lugar(p.piscina, donde)}</span></div>
             <span class="ct-ha">${p.home ? "En casa" : "Fuera"}</span>
           </div>
         </div>
@@ -543,7 +552,7 @@
           <div class="md-center">${center}</div>
           <div class="md-team">${crest(V)}<b>${esc(T[V].nombre)}</b></div>
         </div>
-        <div class="md-when">${whenText(p)} · ${timeText(p)}${p.piscina ? " · " + esc(p.piscina) : ""}</div>
+        <div class="md-when">${whenText(p)} · ${timeText(p)}${p.piscina ? " · " + lugar(p.piscina) : ""}</div>
         <div class="md-chips">${haChip(p)}${p.played ? `<span class="chip ${OUT_CHIP[p.outcome]}">${OUT_TXT[p.outcome]}</span>` : ""}</div>
       </div>`) + `
       <div class="md-body">${body}</div>`;

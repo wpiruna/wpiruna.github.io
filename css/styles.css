@@ -432,8 +432,8 @@ button.board:hover { border-color: var(--sky); }
   display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
   padding: 10px 12px; border-radius: var(--radius-sm); background: var(--panel-2); border: 1px solid var(--line-2);
 }
-button.jm { cursor: pointer; transition: border-color .15s; }
-button.jm:hover { border-color: var(--sky); }
+.jm[data-match] { cursor: pointer; transition: border-color .15s; }
+.jm[data-match]:hover { border-color: var(--sky); }
 .jm.us { border-color: rgba(43, 200, 255, .45); background: linear-gradient(90deg, var(--sky-soft), var(--panel-2) 70%); }
 .jm-teams { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
 .jm-team { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: .9rem; min-width: 0; }
@@ -549,6 +549,10 @@ dialog { color: var(--text); }
 .ct-info div span { font-family: var(--font); font-size: max(3cqw, 12px); color: #a9b8d6; }
 .ct-ha { flex: none; font-size: max(3cqw, 11px); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 1.5cqw 3cqw; border-radius: 6px; border: 1.5px solid var(--sky); color: var(--sky); }
 .cartel.home .ct-ha { background: var(--ball); border-color: var(--ball); color: var(--sky-ink); }
+/* Enlace a Google Maps de la piscina */
+.map-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(43, 200, 255, .55); text-underline-offset: 3px; }
+.map-link:hover { color: var(--sky); }
+.map-link svg { display: inline-block; width: 1em; height: 1em; margin-right: 3px; vertical-align: -.15em; fill: none; stroke: var(--sky); stroke-width: 2; }
 .md-body { padding: 18px; }
 .md-body h3 { margin: 20px 0 10px; font-family: var(--display); font-weight: 700; font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
 .md-body h3:first-child { margin-top: 0; }

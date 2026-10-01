@@ -45,39 +45,59 @@ window.DATOS = {
     urbatb:    { nombre: "Urbat B",                 corto: "Urbat B",    sigla: "URB", escudo: "img/escudos/urbatb.png" }
   },
 
+  /*
+   * PISCINAS — destino del enlace a Google Maps ("Cómo llegar") de cada piscina.
+   * La clave es el nombre tal cual aparece en `piscina` o en `lugar`.
+   * Valor: coordenadas "lat,lng" (sacadas de Clupik) o una dirección de texto.
+   */
+  piscinas: {
+    "UPNA":                             "42.7967038,-1.6295517",
+    "Behekosoloa Kiroldegia":           "Lauro Ikastola, Loiu",
+    "Claret Askartza Kiroldegia":       "Polideportivo Claret Askartza, Sarriena Auzoa 173, Leioa",
+    "Complejo Deportivo Mendizorrotza": "42.83164559999999,-2.7215201",
+    "Sakoneta Kiroldegia":              "43.3247191,-2.9881035",
+    "Orbea Kiroldegia":                 "43.1873424,-2.4630009",
+    "Club Deportivo Bilbao":            "43.264712,-2.934510999999999",
+    "Polideportivo Las Llanas":         "Polideportivo Las Llanas, Alameda las Llanas 12, Sestao",
+    "P.M. Muelle de Txurruka":          "43.32620180000001,-3.0217049000000316",
+    "C.D. Larraina":                    "42.81713389999999,-1.6551422",
+    "Azken Portu Kiroldegia":           "43.34144320000001,-1.7763287999999875",
+    "Altza Kiroldegia":                 "43.3184398,-1.9276579"
+  },
+
   partidos: [
     // ---------- 1ª VUELTA ----------
     { id: "p01", fecha: "2026-10-10", hora: "15:00", local: "iruna",    visitante: "sestao",   piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j01.jpg", encuadre: "45% 45%", lema: "¡A por ellos!" } },
-    { id: "p02", fecha: "2026-10-18", hora: "15:00", local: "lauro",    visitante: "iruna",    resultado: null,
+    { id: "p02", fecha: "2026-10-18", hora: "15:00", local: "lauro",    visitante: "iruna",    piscina: "Behekosoloa Kiroldegia", resultado: null,
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
     { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" } },
-    { id: "p04", fecha: "2026-10-31", hora: null, local: "lautada",  visitante: "iruna",    resultado: null,
+    { id: "p04", fecha: "2026-10-31", hora: null, local: "lautada",  visitante: "iruna",    piscina: "Complejo Deportivo Mendizorrotza", resultado: null,
       cartel: { foto: "img/carteles/j04.jpg", encuadre: "15% 50%" } },
     { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j05.jpg", encuadre: "52% 30%" } },
-    { id: "p06", fecha: "2026-10-18", hora: "10:30", local: "askartza", visitante: "iruna",    resultado: null,
+    { id: "p06", fecha: "2026-10-18", hora: "10:30", local: "askartza", visitante: "iruna",    piscina: "Claret Askartza Kiroldegia", resultado: null,
       cartel: { foto: "img/carteles/j06.jpg", encuadre: "25% 50%" } },
     { id: "p07", fecha: "2026-11-22", hora: "11:00", local: "iruna",    visitante: "larraina", piscina: "UPNA", resultado: null },
-    { id: "p08", fecha: "2027-02-13", hora: "13:30", local: "leioa",    visitante: "iruna",    resultado: null },
+    { id: "p08", fecha: "2027-02-13", hora: "13:30", local: "leioa",    visitante: "iruna",    piscina: "Sakoneta Kiroldegia", resultado: null },
     { id: "p09", fecha: "2026-12-06", hora: "11:00", local: "iruna",    visitante: "urgara",   piscina: "UPNA", resultado: null },
     { id: "p10", fecha: "2026-12-13", hora: "11:00", local: "iruna",    visitante: "donosti",  piscina: "UPNA", resultado: null },
-    { id: "p11", fecha: "2026-12-19", hora: null, local: "urbatb",   visitante: "iruna",    resultado: null },
+    { id: "p11", fecha: "2026-12-19", hora: null, local: "urbatb",   visitante: "iruna",    piscina: "Orbea Kiroldegia", resultado: null },
 
     // ---------- 2ª VUELTA ----------
-    { id: "p12", fecha: "2027-01-09", hora: null, franja: "Mañana", local: "cdb",    visitante: "iruna", resultado: null,
+    { id: "p12", fecha: "2027-01-09", hora: null, franja: "Mañana", local: "cdb",    visitante: "iruna", piscina: "Club Deportivo Bilbao", resultado: null,
       nota: "Adelantado del 30 de enero. Doble jornada en Bizkaia: Bilbao por la mañana y Sestao por la tarde." },
-    { id: "p13", fecha: "2027-01-09", hora: null, franja: "Tarde",  local: "sestao", visitante: "iruna", resultado: null,
+    { id: "p13", fecha: "2027-01-09", hora: null, franja: "Tarde",  local: "sestao", visitante: "iruna", piscina: "Polideportivo Las Llanas", resultado: null,
       nota: "Adelantado del 16 de enero. Doble jornada en Bizkaia: Bilbao por la mañana y Sestao por la tarde." },
     { id: "p14", fecha: "2027-01-24", hora: "11:00", local: "iruna",    visitante: "lauro",    piscina: "UPNA", resultado: null },
     { id: "p15", fecha: "2027-02-07", hora: "11:00", local: "iruna",    visitante: "lautada",  piscina: "UPNA", resultado: null },
-    { id: "p16", fecha: "2027-02-13", hora: "18:00", local: "np",       visitante: "iruna",    resultado: null },
+    { id: "p16", fecha: "2027-02-13", hora: "18:00", local: "np",       visitante: "iruna",    piscina: "P.M. Muelle de Txurruka", resultado: null },
     { id: "p17", fecha: "2027-02-21", hora: "11:00", local: "iruna",    visitante: "askartza", piscina: "UPNA", resultado: null },
-    { id: "p18", fecha: "2027-02-27", hora: null, local: "larraina", visitante: "iruna",    resultado: null },
+    { id: "p18", fecha: "2027-02-27", hora: null, local: "larraina", visitante: "iruna",    piscina: "C.D. Larraina", resultado: null },
     { id: "p19", fecha: "2026-11-15", hora: "11:00", local: "iruna",    visitante: "leioa",    piscina: "UPNA", resultado: null },
-    { id: "p20", fecha: "2027-03-13", hora: null, local: "urgara",   visitante: "iruna",    resultado: null },
-    { id: "p21", fecha: "2027-03-20", hora: null, local: "donosti",  visitante: "iruna",    resultado: null },
+    { id: "p20", fecha: "2027-03-13", hora: null, local: "urgara",   visitante: "iruna",    piscina: "Azken Portu Kiroldegia", resultado: null },
+    { id: "p21", fecha: "2027-03-20", hora: null, local: "donosti",  visitante: "iruna",    piscina: "Altza Kiroldegia", resultado: null },
     { id: "p22", fecha: "2027-04-11", hora: "11:00", local: "iruna",    visitante: "urbatb",   piscina: "UPNA", resultado: null }
   ],
 
