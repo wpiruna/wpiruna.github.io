@@ -608,6 +608,24 @@
     } catch (e) { /* cancelado */ }
   }
 
+  /* ---------- Estadísticas (GoatCounter) ---------- */
+  // Solo hay contador en la web publicada (ver index.html); aquí se encolan las
+  // visitas hasta que carga el script y luego se envían.
+  const pendientes = [];
+  function contar(path, title, event = false) {
+    if (!window.goatcounter) return;
+    pendientes.push({ path, title, event });
+    enviar();
+  }
+  function enviar() {
+    if (!window.goatcounter || typeof window.goatcounter.count !== "function") return;
+    while (pendientes.length) window.goatcounter.count(pendientes.shift());
+  }
+  const gcScript = document.getElementById("goatcounter");
+  if (gcScript) gcScript.addEventListener("load", enviar);
+  const NOMBRE_VISTA = { inicio: "Inicio", calendario: "Calendario", resultados: "Resultados", jornadas: "Jornadas", clasificacion: "Clasificación" };
+  let ultimaContada = null;
+
   /* ---------- Router ---------- */
   const VIEWS = ["inicio", "calendario", "resultados", "jornadas", "clasificacion"];
   let currentView = "inicio";
@@ -629,13 +647,19 @@
     const h = location.hash.replace(/^#/, "");
     if (h.startsWith("partido-")) {
       if (!rendered[currentView]) showView(currentView);
+      const p = byId[h.slice(8)];
       openMatch(h.slice(8));
+      if (p) {
+        const j = JORNADA[p.id];
+        contar(`ficha-${j ? "j" + String(j).padStart(2, "0") : p.id}`, `Ficha${j ? " J" + j : ""}: ${T[p.local].corto} – ${T[p.visitante].corto}`, true);
+      }
       return;
     }
     if (dlg.open) dlg.close();
     const v = VIEWS.includes(h) ? h : "inicio";
     const changed = v !== currentView || !rendered[v];
     showView(v);
+    if (v !== ultimaContada) { ultimaContada = v; contar("/" + (v === "inicio" ? "" : v), NOMBRE_VISTA[v]); }
     if (changed) window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
   }
   window.addEventListener("hashchange", route);

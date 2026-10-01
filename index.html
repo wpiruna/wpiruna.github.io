@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261001-9">
+  <link rel="stylesheet" href="css/styles.css?v=20261001-10">
   <style>:root { padding-top: env(safe-area-inset-top, 0px); }</style>
 </head>
 <body>
@@ -230,7 +230,18 @@
     </div>
   </dialog>
 
-  <script src="data/datos.js?v=20261001-9"></script>
-  <script src="js/app.js?v=20261001-9"></script>
+  <!-- Estadísticas de visitas (GoatCounter, sin cookies). Solo en la web publicada:
+       no cuenta las pruebas en local ni la vista previa de claude.ai. -->
+  <script>
+    if (location.hostname === "wpiruna.github.io") {
+      window.goatcounter = { no_onload: true };
+      var gc = document.createElement("script");
+      gc.id = "goatcounter"; gc.async = true; gc.src = "https://gc.zgo.at/count.js";
+      gc.dataset.goatcounter = "https://wpiruna.goatcounter.com/count";
+      document.head.appendChild(gc);
+    }
+  </script>
+  <script src="data/datos.js?v=20261001-10"></script>
+  <script src="js/app.js?v=20261001-10"></script>
 </body>
 </html>
