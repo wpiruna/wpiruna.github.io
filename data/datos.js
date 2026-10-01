@@ -51,15 +51,15 @@ window.DATOS = {
       cartel: { foto: "img/carteles/j01.jpg", encuadre: "45% 45%", lema: "¡A por ellos!" } },
     { id: "p02", fecha: "2026-10-18", hora: "15:00", local: "lauro",    visitante: "iruna",    resultado: null,
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
-    { id: "p03", fecha: "2026-10-24", hora: null, local: "iruna",    visitante: "cdb",      resultado: null,
+    { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j03.jpg", encuadre: "52% 30%" } },
     { id: "p04", fecha: "2026-10-31", hora: null, local: "lautada",  visitante: "iruna",    resultado: null },
-    { id: "p05", fecha: "2026-11-07", hora: null, local: "iruna",    visitante: "np",       resultado: null },
+    { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA", resultado: null },
     { id: "p06", fecha: "2026-10-18", hora: "10:30", local: "askartza", visitante: "iruna",    resultado: null },
-    { id: "p07", fecha: "2026-11-21", hora: null, local: "iruna",    visitante: "larraina", resultado: null },
+    { id: "p07", fecha: "2026-11-22", hora: "11:00", local: "iruna",    visitante: "larraina", piscina: "UPNA", resultado: null },
     { id: "p08", fecha: "2026-11-28", hora: null, local: "leioa",    visitante: "iruna",    resultado: null },
-    { id: "p09", fecha: "2026-12-05", hora: null, local: "iruna",    visitante: "urgara",   resultado: null },
-    { id: "p10", fecha: "2026-12-12", hora: null, local: "iruna",    visitante: "donosti",  resultado: null },
+    { id: "p09", fecha: "2026-12-06", hora: "11:00", local: "iruna",    visitante: "urgara",   piscina: "UPNA", resultado: null },
+    { id: "p10", fecha: "2026-12-13", hora: "11:00", local: "iruna",    visitante: "donosti",  piscina: "UPNA", resultado: null },
     { id: "p11", fecha: "2026-12-19", hora: null, local: "urbatb",   visitante: "iruna",    resultado: null },
 
     // ---------- 2ª VUELTA ----------
@@ -67,15 +67,15 @@ window.DATOS = {
       nota: "Adelantado del 30 de enero. Doble jornada en Bizkaia: Bilbao por la mañana y Sestao por la tarde." },
     { id: "p13", fecha: "2027-01-09", hora: null, franja: "Tarde",  local: "sestao", visitante: "iruna", resultado: null,
       nota: "Adelantado del 16 de enero. Doble jornada en Bizkaia: Bilbao por la mañana y Sestao por la tarde." },
-    { id: "p14", fecha: "2027-01-23", hora: null, local: "iruna",    visitante: "lauro",    resultado: null },
-    { id: "p15", fecha: "2027-02-06", hora: null, local: "iruna",    visitante: "lautada",  resultado: null },
+    { id: "p14", fecha: "2027-01-24", hora: "11:00", local: "iruna",    visitante: "lauro",    piscina: "UPNA", resultado: null },
+    { id: "p15", fecha: "2027-02-07", hora: "11:00", local: "iruna",    visitante: "lautada",  piscina: "UPNA", resultado: null },
     { id: "p16", fecha: "2027-02-13", hora: null, local: "np",       visitante: "iruna",    resultado: null },
-    { id: "p17", fecha: "2027-02-20", hora: null, local: "iruna",    visitante: "askartza", resultado: null },
+    { id: "p17", fecha: "2027-02-21", hora: "11:00", local: "iruna",    visitante: "askartza", piscina: "UPNA", resultado: null },
     { id: "p18", fecha: "2027-02-27", hora: null, local: "larraina", visitante: "iruna",    resultado: null },
-    { id: "p19", fecha: "2026-11-15", hora: null, local: "iruna",    visitante: "leioa",    resultado: null },
+    { id: "p19", fecha: "2026-11-15", hora: "11:00", local: "iruna",    visitante: "leioa",    piscina: "UPNA", resultado: null },
     { id: "p20", fecha: "2027-03-13", hora: null, local: "urgara",   visitante: "iruna",    resultado: null },
     { id: "p21", fecha: "2027-03-20", hora: null, local: "donosti",  visitante: "iruna",    resultado: null },
-    { id: "p22", fecha: "2027-04-10", hora: null, local: "iruna",    visitante: "urbatb",   resultado: null }
+    { id: "p22", fecha: "2027-04-11", hora: "11:00", local: "iruna",    visitante: "urbatb",   piscina: "UPNA", resultado: null }
   ],
 
   /*
