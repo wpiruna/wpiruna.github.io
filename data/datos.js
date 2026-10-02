@@ -95,7 +95,7 @@ window.DATOS = {
     { id: "p16", fecha: "2027-02-13", hora: "18:00", local: "np",       visitante: "iruna",    piscina: "P.M. Muelle de Txurruka", resultado: null },
     { id: "p17", fecha: "2027-02-21", hora: "11:00", local: "iruna",    visitante: "askartza", piscina: "UPNA", resultado: null },
     { id: "p18", fecha: "2027-02-27", hora: null, local: "larraina", visitante: "iruna",    piscina: "C.D. Larraina", resultado: null },
-    { id: "p19", fecha: "2026-11-15", hora: "11:00", local: "iruna",    visitante: "leioa",    piscina: "UPNA", resultado: null },
+    { id: "p19", fecha: "2026-11-14", hora: "15:45", local: "iruna",    visitante: "leioa",    piscina: "UPNA", resultado: null },
     { id: "p20", fecha: "2027-03-13", hora: null, local: "urgara",   visitante: "iruna",    piscina: "Azken Portu Kiroldegia", resultado: null },
     { id: "p21", fecha: "2027-03-20", hora: null, local: "donosti",  visitante: "iruna",    piscina: "Altza Kiroldegia", resultado: null },
     { id: "p22", fecha: "2027-04-11", hora: "11:00", local: "iruna",    visitante: "urbatb",   piscina: "UPNA", resultado: null }
