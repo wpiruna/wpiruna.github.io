@@ -36,6 +36,11 @@ cartel: { foto: "img/carteles/j04.jpg", encuadre: "50% 40%", lema: "¡Vamos Iru�
 
 `encuadre` (qué parte de la foto se ve) y `lema` son opcionales. Sin cartel, la ficha se ve como antes.
 
+### Actualizar las estadísticas de los jugadores
+En `plantilla`, suma a cada jugador lo de Clupik: `pj` (partidos jugados), `goles`, `penMarcados`, `penFallados`, `penCometidos` y `rojas`.
+Las manzanadas se calculan solas (roja = 3, penalti fallado = 2, penalti cometido = 1).
+La cara de cada jugador está en `img/plantilla/<id>.svg`.
+
 ### Actualizar la clasificación
 En `clasificacion`, copia la tabla oficial **en orden de posición** y pon la fecha en `actualizada: "2026-10-12"`.
 Ids de los equipos: `iruna, sestao, lauro, cdb, lautada, np, askartza, larraina, leioa, urgara, donosti, urbatb`.
