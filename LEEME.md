@@ -38,7 +38,7 @@ cartel: { foto: "img/carteles/j04.jpg", encuadre: "50% 40%", lema: "¡Vamos Iru�
 
 ### Actualizar las estadísticas de los jugadores
 En `plantilla`, suma a cada jugador lo de Clupik: `pj` (partidos jugados), `goles`, `penMarcados`, `penFallados`, `penCometidos` y `rojas`.
-Las manzanadas se calculan solas (roja = 3, penalti fallado = 2, penalti cometido = 1).
+Las manzanadas se calculan solas (roja = 5, penalti fallado = 2, penalti cometido = 1).
 La cara de cada jugador está en `img/plantilla/<id>.svg`.
 
 ### Actualizar la clasificación

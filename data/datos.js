@@ -54,7 +54,7 @@ window.DATOS = {
    * PLANTILLA Y ESTADÍSTICAS — se copian de Clupik después de cada partido.
    *   pj partidos jugados · goles · penMarcados · penFallados · penCometidos
    *   rojas (tarjetas rojas)
-   * Las manzanadas se calculan solas: roja = 3, penalti fallado = 2, penalti cometido = 1.
+   * Las manzanadas se calculan solas: roja = 5, penalti fallado = 2, penalti cometido = 1.
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [

@@ -359,8 +359,8 @@
     { k: "penCometidos", h: "Pen.<br>com.", t: "Penaltis cometidos" },
     { k: "rojas", h: "Rojas", t: "Tarjetas rojas" },
   ];
-  // Manzanadas: roja = 3, penalti fallado = 2, penalti cometido = 1
-  const manzanadas = (j) => 3 * (j.rojas || 0) + 2 * (j.penFallados || 0) + (j.penCometidos || 0);
+  // Manzanadas: roja = 5, penalti fallado = 2, penalti cometido = 1
+  const manzanadas = (j) => 5 * (j.rojas || 0) + 2 * (j.penFallados || 0) + (j.penCometidos || 0);
   let statsSort = "jugador";  // "jugador" = orden alfabético; si no, la clave de la columna
   const cara = (j) => `<span class="sq-face"><img src="img/plantilla/${esc(j.id)}.svg" alt="" loading="lazy"></span>`;
 
@@ -400,7 +400,7 @@
         <th scope="row" class="c-player"><div>${cara(j)}${statsSort === "jugador" ? "" : `<span class="sq-num">${puesto(j)}</span>`}<span class="sq-name">${esc(j.apodo)}${j.portero ? "<small>Portero</small>" : ""}</span></div></th>
         ${STATS.map((c) => `<td class="${c.k === "manzanadas" ? "c-apple" : ""}${j[c.k] ? "" : " zero"}">${j[c.k] || 0}</td>`).join("")}
       </tr>`).join("");
-    $("#squadLegend").innerHTML = STATS.map((c) => `<dt>${c.k === "manzanadas" ? APPLE : c.h.replace("<br>", " ")}</dt><dd>${c.k === "manzanadas" ? "Manzanadas: tarjeta roja = 3, penalti fallado = 2, penalti cometido = 1" : c.t}</dd>`).join("")
+    $("#squadLegend").innerHTML = STATS.map((c) => `<dt>${c.k === "manzanadas" ? APPLE : c.h.replace("<br>", " ")}</dt><dd>${c.k === "manzanadas" ? "Manzanadas: tarjeta roja = 5, penalti fallado = 2, penalti cometido = 1" : c.t}</dd>`).join("")
       + `<dt></dt><dd>Toca una columna para ordenar la plantilla; el número junto al nombre es el puesto en esa columna. En el móvil, desliza la tabla para ver todas.</dd>`;
   }
 
