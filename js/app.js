@@ -361,7 +361,7 @@
   ];
   // Manzanadas: roja = 3, penalti fallado = 2, penalti cometido = 1
   const manzanadas = (j) => 3 * (j.rojas || 0) + 2 * (j.penFallados || 0) + (j.penCometidos || 0);
-  let statsSort = "dorsal";
+  let statsSort = "jugador";  // "jugador" = orden alfabético; si no, la clave de la columna
   const cara = (j) => `<span class="sq-face"><img src="img/plantilla/${esc(j.id)}.svg" alt="" loading="lazy"></span>`;
 
   function renderStats() {
@@ -386,16 +386,22 @@
       </div>`;
     }).join("");
 
-    const rows = [...squad].sort((a, b) => statsSort === "dorsal" ? a.dorsal - b.dorsal : (b[statsSort] - a[statsSort]) || a.dorsal - b.dorsal);
-    const th = (k, label, title, cls = "") => `<th scope="col" class="${cls}"${statsSort === k ? ` aria-sort="${k === "dorsal" ? "ascending" : "descending"}"` : ""}>
+    const porNombre = (a, b) => a.apodo.localeCompare(b.apodo, "es");
+    const rows = [...squad].sort((a, b) => statsSort === "jugador" ? porNombre(a, b) : (b[statsSort] - a[statsSort]) || porNombre(a, b));
+    // Puesto según la columna elegida (empates comparten puesto; con 0 no hay puesto)
+    const puesto = (j) => {
+      if (statsSort === "jugador" || !j[statsSort]) return "";
+      return 1 + squad.filter((o) => o[statsSort] > j[statsSort]).length + "º";
+    };
+    const th = (k, label, title, cls = "") => `<th scope="col" class="${cls}"${statsSort === k ? ` aria-sort="${k === "jugador" ? "ascending" : "descending"}"` : ""}>
         <button type="button" data-sort="${k}" title="${title}" aria-label="Ordenar por ${title.toLowerCase()}">${label}</button></th>`;
-    $("#squad thead").innerHTML = `<tr>${th("dorsal", "Jugador", "Dorsal", "c-player")}${STATS.map((c) => th(c.k, c.h, c.t, c.k === "manzanadas" ? "c-apple" : "")).join("")}</tr>`;
+    $("#squad thead").innerHTML = `<tr>${th("jugador", "Jugador", "Nombre", "c-player")}${STATS.map((c) => th(c.k, c.h, c.t, c.k === "manzanadas" ? "c-apple" : "")).join("")}</tr>`;
     $("#squad tbody").innerHTML = rows.map((j) => `<tr>
-        <th scope="row" class="c-player"><div>${cara(j)}<span class="sq-num">${j.dorsal}</span><span class="sq-name">${esc(j.apodo)}${j.portero ? "<small>Portero</small>" : ""}</span></div></th>
+        <th scope="row" class="c-player"><div>${cara(j)}${statsSort === "jugador" ? "" : `<span class="sq-num">${puesto(j)}</span>`}<span class="sq-name">${esc(j.apodo)}${j.portero ? "<small>Portero</small>" : ""}</span></div></th>
         ${STATS.map((c) => `<td class="${c.k === "manzanadas" ? "c-apple" : ""}${j[c.k] ? "" : " zero"}">${j[c.k] || 0}</td>`).join("")}
       </tr>`).join("");
     $("#squadLegend").innerHTML = STATS.map((c) => `<dt>${c.k === "manzanadas" ? APPLE : c.h.replace("<br>", " ")}</dt><dd>${c.k === "manzanadas" ? "Manzanadas: tarjeta roja = 3, penalti fallado = 2, penalti cometido = 1" : c.t}</dd>`).join("")
-      + `<dt></dt><dd>Toca una columna para ordenar la plantilla. En el móvil, desliza la tabla para ver todas.</dd>`;
+      + `<dt></dt><dd>Toca una columna para ordenar la plantilla; el número junto al nombre es el puesto en esa columna. En el móvil, desliza la tabla para ver todas.</dd>`;
   }
 
 

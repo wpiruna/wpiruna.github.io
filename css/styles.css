@@ -517,7 +517,7 @@ button.board:hover { border-color: var(--sky); }
 .squad .c-player { position: sticky; left: 0; z-index: 1; min-width: 138px; padding: 6px 8px 6px 10px; background: var(--panel); text-align: left; border-bottom: 1px solid var(--line-2); box-shadow: 1px 0 0 var(--line-2); }
 .squad thead .c-player { z-index: 2; }
 .squad tbody .c-player div { display: flex; align-items: center; gap: 8px; }
-.sq-num { width: 18px; flex: none; text-align: right; font-family: var(--display); font-weight: 700; font-size: .85rem; color: var(--sky); }
+.sq-num { width: 24px; flex: none; text-align: right; font-family: var(--display); font-weight: 700; font-size: .85rem; color: var(--sky); }
 .sq-name { font-weight: 600; font-size: .92rem; line-height: 1.15; white-space: nowrap; }
 .sq-name small { display: block; font-family: var(--display); font-size: .6rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .squad-legend { display: grid; grid-template-columns: auto 1fr; gap: 5px 12px; margin: 14px 2px 0; font-size: .8rem; color: var(--muted); }
