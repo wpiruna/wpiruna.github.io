@@ -356,7 +356,6 @@
     { k: "manzanadas", h: `${APPLE}<br>Manz.`, t: "Manzanadas" },
     { k: "penMarcados", h: "Pen.<br>marc.", t: "Penaltis marcados" },
     { k: "penFallados", h: "Pen.<br>fall.", t: "Penaltis fallados" },
-    { k: "penProvocados", h: "Pen.<br>prov.", t: "Penaltis provocados" },
     { k: "penCometidos", h: "Pen.<br>com.", t: "Penaltis cometidos" },
     { k: "rojas", h: "Rojas", t: "Tarjetas rojas" },
   ];
@@ -374,7 +373,7 @@
 
     const lideres = [
       { k: "goles", t: "Máximo goleador", cls: "" },
-      { k: "manzanadas", t: "Rey de la manzana", cls: " apple-card" },
+      { k: "manzanadas", t: "Manzano del año", cls: " apple-card" },
     ];
     $("#statsLeaders").innerHTML = lideres.map((l) => {
       const max = Math.max(0, ...squad.map((j) => j[l.k]));

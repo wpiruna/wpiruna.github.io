@@ -52,30 +52,30 @@ window.DATOS = {
    */
   /*
    * PLANTILLA Y ESTADÍSTICAS — se copian de Clupik después de cada partido.
-   *   pj partidos jugados · goles · penMarcados · penFallados · penProvocados
-   *   penCometidos · rojas (tarjetas rojas)
+   *   pj partidos jugados · goles · penMarcados · penFallados · penCometidos
+   *   rojas (tarjetas rojas)
    * Las manzanadas se calculan solas: roja = 3, penalti fallado = 2, penalti cometido = 1.
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [
-    { id: "larry",    apodo: "Larry",    dorsal:  1, portero: true, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "angel",    apodo: "Ángel",    dorsal:  2, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "beor",     apodo: "Beor",     dorsal:  3, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "juli2",    apodo: "Juli II",  dorsal:  4, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "aritz",    apodo: "Aritz",    dorsal:  5, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iker",     apodo: "Iker",     dorsal:  6, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "tainta",   apodo: "Tainta",   dorsal:  7, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iglesias", apodo: "Iglesias", dorsal:  8, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "eguilaz",  apodo: "Eguilaz",  dorsal:  9, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "julen",    apodo: "Julen",    dorsal: 10, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "reclu",    apodo: "Reclu",    dorsal: 11, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "rafa",     apodo: "Rafa",     dorsal: 12, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "juli1",    apodo: "Juli I",   dorsal: 13, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "bartu",    apodo: "Bartu",    dorsal: 14, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "labairu",  apodo: "Labairu",  dorsal: 15, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "borja",    apodo: "Borja",    dorsal: 16, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "murua",    apodo: "Murua",    dorsal: 17, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 },
-    { id: "txema",    apodo: "Txema",    dorsal: 18, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penProvocados: 0, penCometidos: 0, rojas: 0 }
+    { id: "larry",    apodo: "Larry",    dorsal:  1, portero: true, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "angel",    apodo: "Ángel",    dorsal:  2, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "beor",     apodo: "Beor",     dorsal:  3, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "juli2",    apodo: "Juli II",  dorsal:  4, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "aritz",    apodo: "Aritz",    dorsal:  5, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "iker",     apodo: "Iker",     dorsal:  6, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "tainta",   apodo: "Tainta",   dorsal:  7, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "iglesias", apodo: "Iglesias", dorsal:  8, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "eguilaz",  apodo: "Eguilaz",  dorsal:  9, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "julen",    apodo: "Julen",    dorsal: 10, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "reclu",    apodo: "Reclu",    dorsal: 11, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "rafa",     apodo: "Rafa",     dorsal: 12, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "juli1",    apodo: "Juli I",   dorsal: 13, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "bartu",    apodo: "Bartu",    dorsal: 14, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "labairu",  apodo: "Labairu",  dorsal: 15, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "borja",    apodo: "Borja",    dorsal: 16, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "murua",    apodo: "Murua",    dorsal: 17, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "txema",    apodo: "Txema",    dorsal: 18, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
   ],
 
   piscinas: {
