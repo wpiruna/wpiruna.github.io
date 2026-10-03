@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>WP Iruña Masculino</title>
-  <meta name="description" content="Calendario, resultados, clasificación y crónicas del equipo masculino del WP Iruña 9802. Temporada 2026/27.">
+  <meta name="description" content="Calendario, resultados, clasificación, estadísticas y crónicas del equipo masculino del WP Iruña 9802. Temporada 2026/27.">
   <meta name="theme-color" content="#060b16">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261002-1">
+  <link rel="stylesheet" href="css/styles.css?v=20261003-prueba1">
   <style>:root { padding-top: env(safe-area-inset-top, 0px); }</style>
 </head>
 <body>
@@ -26,9 +26,9 @@
     <nav class="topnav" aria-label="Secciones">
       <a href="#inicio" data-nav="inicio">Inicio</a>
       <a href="#calendario" data-nav="calendario">Calendario</a>
-      <a href="#resultados" data-nav="resultados">Resultados</a>
       <a href="#jornadas" data-nav="jornadas">Jornadas</a>
       <a href="#clasificacion" data-nav="clasificacion">Clasificación</a>
+      <a href="#estadisticas" data-nav="estadisticas">Estadísticas</a>
     </nav>
     <span class="season-tag">1ª MASC · <span data-temporada-corta></span></span>
   </header>
@@ -64,7 +64,7 @@
           <section aria-labelledby="lastTitle">
             <div class="block-head">
               <h2 id="lastTitle">Último resultado</h2>
-              <a href="#resultados" class="link-more">Todos</a>
+              <a href="#jornadas" class="link-more">Jornadas</a>
             </div>
             <div id="lastResult" class="panel"></div>
           </section>
@@ -132,17 +132,6 @@
       </div>
     </section>
 
-    <!-- RESULTADOS -->
-    <section class="view" id="view-resultados" data-view="resultados" hidden>
-      <div class="wrap">
-        <div class="view-head">
-          <h1 class="page-title">Resultados</h1>
-        </div>
-        <div id="resultsSummary"></div>
-        <div id="resultsList" class="results-list"></div>
-      </div>
-    </section>
-
     <!-- JORNADAS -->
     <section class="view" id="view-jornadas" data-view="jornadas" hidden>
       <div class="wrap">
@@ -189,6 +178,24 @@
         </label>
       </div>
     </section>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="view" id="view-estadisticas" data-view="estadisticas" hidden>
+      <div class="wrap">
+        <div class="view-head">
+          <h1 class="page-title">Estadísticas</h1>
+          <p class="muted" id="statsNote"></p>
+        </div>
+        <div id="statsLeaders" class="leaders"></div>
+        <div class="card table-card stats-card">
+          <table class="squad" id="squad">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <dl class="squad-legend" id="squadLegend"></dl>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -206,10 +213,6 @@
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>
       <span>Calendario</span>
     </a>
-    <a href="#resultados" data-nav="resultados">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.8 10.5c3 1.2 5.6.2 8.2-2.9M12 20.5c-.8-4.2.6-7.3 4.7-9.7M14 3.8c-.4 3 .8 5.5 3.2 7"/></svg>
-      <span>Resultados</span>
-    </a>
     <a href="#jornadas" data-nav="jornadas">
       <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="4" width="17" height="16" rx="2"/><path d="M7.5 9h9M7.5 12.5h9M7.5 16h5"/></svg>
       <span>Jornadas</span>
@@ -217,6 +220,10 @@
     <a href="#clasificacion" data-nav="clasificacion">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V13h4.5v7M9.75 20V8h4.5v12M15.5 20v-9.5H20V20M3 20h18"/></svg>
       <span class="lbl-long">Clasificación</span><span class="lbl-short">Clasif</span>
+    </a>
+    <a href="#estadisticas" data-nav="estadisticas">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.3"/><path d="M3 19.5c.6-3.4 3-5.3 6-5.3s5.4 1.9 6 5.3"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.3c2.6 0 4.4 1.5 5 4.2"/></svg>
+      <span class="lbl-long">Estadísticas</span><span class="lbl-short">Stats</span>
     </a>
   </nav>
 
@@ -241,7 +248,7 @@
       document.head.appendChild(gc);
     }
   </script>
-  <script src="data/datos.js?v=20261002-1"></script>
-  <script src="js/app.js?v=20261002-1"></script>
+  <script src="data/datos.js?v=20261003-prueba1"></script>
+  <script src="js/app.js?v=20261003-prueba1"></script>
 </body>
 </html>

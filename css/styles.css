@@ -486,6 +486,43 @@ button.board:hover { border-color: var(--sky); }
 }
 .toggle-cols { display: flex; align-items: center; gap: 8px; font-size: .85rem; color: var(--muted); margin: 10px 4px 0; }
 
+/* ---------- Estadísticas ---------- */
+.leaders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 14px; }
+.leader { display: flex; align-items: center; gap: 10px; min-width: 0; padding: 12px; border-radius: var(--radius); background: var(--panel); border: 1px solid var(--line); }
+.leader .sq-face { width: 46px; height: 46px; }
+.leader-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.leader-t { font-family: var(--display); font-size: .62rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.leader-n { font-family: var(--display); font-weight: 700; font-size: .95rem; text-transform: uppercase; line-height: 1.15; }
+.leader-v { margin-left: auto; font-family: var(--display); font-weight: 700; font-size: 1.7rem; color: var(--ball); }
+.apple-card .leader-v { color: var(--loss); }
+.sq-face { flex: none; display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; overflow: hidden; background: var(--sky-soft); border: 2px solid rgba(43, 200, 255, .5); }
+.sq-face img { width: 100%; height: 100%; display: block; }
+.sq-face.empty { border-style: dashed; border-color: var(--dim); background: transparent; color: var(--muted); font-family: var(--display); font-weight: 700; }
+.sq-face.empty .apple { width: 22px; height: 22px; }
+.apple { width: 18px; height: 18px; vertical-align: middle; }
+.apple-body { fill: var(--loss); }
+.apple-stem { fill: none; stroke: #8a5a3c; stroke-width: 1.6; stroke-linecap: round; }
+.apple-leaf { fill: var(--win); }
+.stats-card { padding: 0; }
+.squad { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .9rem; }
+.squad thead th { padding: 10px 4px 8px; border-bottom: 1px solid var(--line); vertical-align: bottom; font-family: var(--display); font-size: .62rem; font-weight: 600; letter-spacing: .06em; line-height: 1.15; text-transform: uppercase; color: var(--muted); text-align: center; }
+.squad thead th button { display: block; width: 100%; padding: 2px 0; border: 0; background: none; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; text-align: inherit; cursor: pointer; }
+.squad thead th[aria-sort] { color: var(--sky); box-shadow: inset 0 -2px 0 var(--sky); }
+.squad td { min-width: 42px; padding: 6px 4px; text-align: center; border-bottom: 1px solid var(--line-2); font-family: var(--display); font-weight: 700; font-size: 1.02rem; }
+.squad td.zero { color: var(--dim); }
+.squad td.c-apple { color: var(--loss); background: rgba(255, 93, 115, .07); }
+.squad td.c-apple.zero { color: rgba(255, 93, 115, .35); }
+.squad tbody tr:last-child > * { border-bottom: 0; }
+.squad .c-player { position: sticky; left: 0; z-index: 1; min-width: 138px; padding: 6px 8px 6px 10px; background: var(--panel); text-align: left; border-bottom: 1px solid var(--line-2); box-shadow: 1px 0 0 var(--line-2); }
+.squad thead .c-player { z-index: 2; }
+.squad tbody .c-player div { display: flex; align-items: center; gap: 8px; }
+.sq-num { width: 18px; flex: none; text-align: right; font-family: var(--display); font-weight: 700; font-size: .85rem; color: var(--sky); }
+.sq-name { font-weight: 600; font-size: .92rem; line-height: 1.15; white-space: nowrap; }
+.sq-name small { display: block; font-family: var(--display); font-size: .6rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.squad-legend { display: grid; grid-template-columns: auto 1fr; gap: 5px 12px; margin: 14px 2px 0; font-size: .8rem; color: var(--muted); }
+.squad-legend dt { font-family: var(--display); font-size: .7rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--text); }
+.squad-legend dd { margin: 0; }
+
 /* ---------- Footer ---------- */
 .footer {
   display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center;

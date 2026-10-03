@@ -144,7 +144,7 @@
       box.innerHTML = `
         <div class="board">
           <p class="board-end">¡Gracias por otra temporada, equipo!<br>${s.pj} partidos, ${s.g} victorias y ${s.gf} goles.</p>
-          <div class="board-foot"><a class="btn" href="#resultados">Ver resultados</a></div>
+          <div class="board-foot"><a class="btn" href="#jornadas">Ver jornadas</a></div>
         </div>`;
       cd.hidden = true;
     } else {
@@ -348,32 +348,57 @@
   }
 
   /* ---------- RESULTADOS ---------- */
-  function renderResults() {
-    const played = partidos.filter((p) => p.played).reverse();
-    $("#resultsSummary").innerHTML = `<div class="card">${statsBlock()}</div>`;
-    if (!played.length) {
-      const n = nextMatch();
-      $("#resultsList").innerHTML = `<div class="card"><p class="empty">Todavía no hay resultados. ${n ? `El primero llegará el <b>${whenText(n).toLowerCase()}</b> contra <b>${esc(T[n.rival].nombre)}</b>.` : ""}</p></div>`;
-      return;
-    }
-    $("#resultsList").innerHTML = played.map((p) => `
-      <article class="card result-card ${p.outcome}" data-match="${p.id}" tabindex="0" role="button" aria-label="Ver ficha: ${esc(T[p.local].nombre)} ${p.resultado.local} - ${p.resultado.visitante} ${esc(T[p.visitante].nombre)}">
-        <div class="rc-top"><span>${whenText(p)} · ${JORNADA[p.id] ? `Jornada ${JORNADA[p.id]}` : `${p.vuelta}ª vuelta`}</span>${haChip(p)}</div>
-        <div class="rc-body">
-          <div class="score-row">
-            <div class="score-team">${crest(p.local)}<span>${esc(T[p.local].corto)}</span></div>
-            <div class="score-num">${scoreLV(p)}</div>
-            <div class="score-team">${crest(p.visitante)}<span>${esc(T[p.visitante].corto)}</span></div>
-          </div>
-          ${p.cronica ? `<p class="cronica-teaser"><b>${esc(p.cronica.titulo || "Crónica")}.</b> ${esc((p.cronica.texto || "").split(/\n\s*\n/)[0])}</p>` : ""}
-        </div>
-        <div class="rc-foot">
-          <span class="chip ${OUT_CHIP[p.outcome]}">${OUT_TXT[p.outcome]}</span>
-          ${p.cronica ? `<span class="chip chip-home">Crónica</span>` : ""}
-          ${p.stats ? `<span class="chip chip-away">Estadísticas</span>` : ""}
-        </div>
-      </article>`).join("");
+  /* ---------- ESTADÍSTICAS ---------- */
+  const APPLE = `<svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path class="apple-body" d="M12 7.6c-1.7-1.1-4.7-1.3-6.3 1-1.8 2.5-.9 7 1.3 9.6 1.3 1.5 2.6 2.3 4 1.6.6-.3 1.4-.3 2 0 1.4.7 2.7-.1 4-1.6 2.2-2.6 3.1-7.1 1.3-9.6-1.6-2.3-4.6-2.1-6.3-1z"/><path class="apple-stem" d="M12 7.6c0-2 .7-3.6 2.2-4.6"/><path class="apple-leaf" d="M12.8 5.6c1.4-1.2 3.3-1.3 4.6-.6-.9 1.4-2.8 2-4.6.6z"/></svg>`;
+  const STATS = [
+    { k: "pj", h: "PJ", t: "Partidos jugados" },
+    { k: "goles", h: "Goles", t: "Goles" },
+    { k: "manzanadas", h: `${APPLE}<br>Manz.`, t: "Manzanadas" },
+    { k: "penMarcados", h: "Pen.<br>marc.", t: "Penaltis marcados" },
+    { k: "penFallados", h: "Pen.<br>fall.", t: "Penaltis fallados" },
+    { k: "penProvocados", h: "Pen.<br>prov.", t: "Penaltis provocados" },
+    { k: "penCometidos", h: "Pen.<br>com.", t: "Penaltis cometidos" },
+    { k: "rojas", h: "Rojas", t: "Tarjetas rojas" },
+  ];
+  // Manzanadas: roja = 3, penalti fallado = 2, penalti cometido = 1
+  const manzanadas = (j) => 3 * (j.rojas || 0) + 2 * (j.penFallados || 0) + (j.penCometidos || 0);
+  let statsSort = "dorsal";
+  const cara = (j) => `<span class="sq-face"><img src="img/plantilla/${esc(j.id)}.svg" alt="" loading="lazy"></span>`;
+
+  function renderStats() {
+    const squad = (D.plantilla || []).map((j) => ({ ...j, manzanadas: manzanadas(j) }));
+    const jugados = partidos.filter((p) => p.played).length;
+    $("#statsNote").textContent = jugados
+      ? `Plantilla ${D.temporada} · datos de Clupik tras ${jugados} ${jugados === 1 ? "partido" : "partidos"}`
+      : `Plantilla ${D.temporada} · todo a cero hasta el primer partido`;
+
+    const lideres = [
+      { k: "goles", t: "Máximo goleador", cls: "" },
+      { k: "manzanadas", t: "Rey de la manzana", cls: " apple-card" },
+    ];
+    $("#statsLeaders").innerHTML = lideres.map((l) => {
+      const max = Math.max(0, ...squad.map((j) => j[l.k]));
+      const top = max > 0 ? squad.filter((j) => j[l.k] === max) : [];
+      return `<div class="leader${l.cls}">
+        ${top.length ? cara(top[0]) : `<span class="sq-face empty">${l.k === "manzanadas" ? APPLE : "?"}</span>`}
+        <div class="leader-txt"><span class="leader-t">${l.t}</span>
+          <span class="leader-n">${top.length ? top.map((j) => esc(j.apodo)).join(", ") : "Sin datos todavía"}</span></div>
+        ${top.length ? `<span class="leader-v">${max}</span>` : ""}
+      </div>`;
+    }).join("");
+
+    const rows = [...squad].sort((a, b) => statsSort === "dorsal" ? a.dorsal - b.dorsal : (b[statsSort] - a[statsSort]) || a.dorsal - b.dorsal);
+    const th = (k, label, title, cls = "") => `<th scope="col" class="${cls}"${statsSort === k ? ` aria-sort="${k === "dorsal" ? "ascending" : "descending"}"` : ""}>
+        <button type="button" data-sort="${k}" title="${title}" aria-label="Ordenar por ${title.toLowerCase()}">${label}</button></th>`;
+    $("#squad thead").innerHTML = `<tr>${th("dorsal", "Jugador", "Dorsal", "c-player")}${STATS.map((c) => th(c.k, c.h, c.t, c.k === "manzanadas" ? "c-apple" : "")).join("")}</tr>`;
+    $("#squad tbody").innerHTML = rows.map((j) => `<tr>
+        <th scope="row" class="c-player"><div>${cara(j)}<span class="sq-num">${j.dorsal}</span><span class="sq-name">${esc(j.apodo)}${j.portero ? "<small>Portero</small>" : ""}</span></div></th>
+        ${STATS.map((c) => `<td class="${c.k === "manzanadas" ? "c-apple" : ""}${j[c.k] ? "" : " zero"}">${j[c.k] || 0}</td>`).join("")}
+      </tr>`).join("");
+    $("#squadLegend").innerHTML = STATS.map((c) => `<dt>${c.k === "manzanadas" ? APPLE : c.h.replace("<br>", " ")}</dt><dd>${c.k === "manzanadas" ? "Manzanadas: tarjeta roja = 3, penalti fallado = 2, penalti cometido = 1" : c.t}</dd>`).join("")
+      + `<dt></dt><dd>Toca una columna para ordenar la plantilla. En el móvil, desliza la tabla para ver todas.</dd>`;
   }
+
 
   /* ---------- JORNADAS ---------- */
   const PARTIDOS_POR_JORNADA = Object.keys(T).length / 2;
@@ -623,11 +648,11 @@
   }
   const gcScript = document.getElementById("goatcounter");
   if (gcScript) gcScript.addEventListener("load", enviar);
-  const NOMBRE_VISTA = { inicio: "Inicio", calendario: "Calendario", resultados: "Resultados", jornadas: "Jornadas", clasificacion: "Clasificación" };
+  const NOMBRE_VISTA = { inicio: "Inicio", calendario: "Calendario", jornadas: "Jornadas", clasificacion: "Clasificación", estadisticas: "Estadísticas" };
   let ultimaContada = null;
 
   /* ---------- Router ---------- */
-  const VIEWS = ["inicio", "calendario", "resultados", "jornadas", "clasificacion"];
+  const VIEWS = ["inicio", "calendario", "jornadas", "clasificacion", "estadisticas"];
   let currentView = "inicio";
   const rendered = {};
   function showView(v) {
@@ -637,9 +662,9 @@
     if (!rendered[v]) {
       if (v === "inicio") renderHome();
       if (v === "calendario") setCalMode(calMode);
-      if (v === "resultados") renderResults();
       if (v === "jornadas") renderJornadas();
       if (v === "clasificacion") renderStandings();
+      if (v === "estadisticas") renderStats();
       rendered[v] = true;
     }
   }
@@ -672,7 +697,9 @@
     if (ics) { const p = byId[ics.dataset.ics]; downloadIcs([p], `partido-${p.fecha}.ics`); return; }
     const sh = e.target.closest("[data-share]");
     if (sh) { share(byId[sh.dataset.share]); return; }
-    if (e.target.closest("[data-close]")) { e.target.closest("dialog").close(); }
+    if (e.target.closest("[data-close]")) { e.target.closest("dialog").close(); return; }
+    const so = e.target.closest("[data-sort]");
+    if (so) { statsSort = so.dataset.sort; renderStats(); const b = $(`[data-sort="${statsSort}"]`); if (b) b.focus(); }
   });
   document.addEventListener("keydown", (e) => {
     if ((e.key === "Enter" || e.key === " ") && e.target.matches("[data-match][role=button]")) {
