@@ -111,7 +111,7 @@ window.DATOS = {
     { id: "p08", fecha: "2027-02-13", hora: "13:30", local: "leioa",    visitante: "iruna",    piscina: "Sakoneta Kiroldegia", resultado: null },
     { id: "p09", fecha: "2026-12-06", hora: "11:00", local: "iruna",    visitante: "urgara",   piscina: "UPNA", resultado: null },
     { id: "p10", fecha: "2026-12-13", hora: "11:00", local: "iruna",    visitante: "donosti",  piscina: "UPNA", resultado: null },
-    { id: "p11", fecha: "2026-12-19", hora: null, local: "urbatb",   visitante: "iruna",    piscina: "Orbea Kiroldegia", resultado: null },
+    { id: "p11", fecha: "2027-02-12", hora: "21:15", local: "urbatb",   visitante: "iruna",    piscina: "Orbea Kiroldegia", resultado: null },
 
     // ---------- 2ª VUELTA ----------
     { id: "p12", fecha: "2027-01-09", hora: null, franja: "Mañana", local: "cdb",    visitante: "iruna", piscina: "Club Deportivo Bilbao", resultado: null,
