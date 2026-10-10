@@ -55,6 +55,7 @@ window.DATOS = {
    *   pj partidos jugados · goles · penMarcados · penFallados · penCometidos
    *   rojas (tarjetas rojas)
    * Las manzanadas se calculan solas: roja = 5, penalti fallado = 2, penalti cometido = 1.
+   * manzanadasExtra (opcional): manzanadas que no salen en el acta y pone el vestuario.
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [
@@ -67,7 +68,7 @@ window.DATOS = {
     { id: "tainta",   apodo: "Tainta",   pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "iglesias", apodo: "Iglesias", pj: 1, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "eguilaz",  apodo: "Eguilaz",  pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "julen",    apodo: "Julen",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "julen",    apodo: "Julen",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
     { id: "reclu",    apodo: "Reclu",    pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "rafa",     apodo: "Rafa",     pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "juli1",    apodo: "Juli I",   pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
