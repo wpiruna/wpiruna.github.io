@@ -58,23 +58,23 @@ window.DATOS = {
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [
-    { id: "larry",    apodo: "Larry",    portero: true, pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "angel",    apodo: "Ángel",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "beor",     apodo: "Beor",     pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "juli2",    apodo: "Juli II",  pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "larry",    apodo: "Larry",    portero: true, pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "angel",    apodo: "Ángel",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "beor",     apodo: "Beor",     pj: 1, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "juli2",    apodo: "Juli II",  pj: 1, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "aritz",    apodo: "Aritz",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iker",     apodo: "Iker",     pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "iker",     apodo: "Iker",     pj: 1, goles: 1, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "tainta",   apodo: "Tainta",   pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iglesias", apodo: "Iglesias", pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "iglesias", apodo: "Iglesias", pj: 1, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "eguilaz",  apodo: "Eguilaz",  pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "julen",    apodo: "Julen",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "reclu",    apodo: "Reclu",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "julen",    apodo: "Julen",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "reclu",    apodo: "Reclu",    pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "rafa",     apodo: "Rafa",     pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "juli1",    apodo: "Juli I",   pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "bartu",    apodo: "Bartu",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "labairu",  apodo: "Labairu",  pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "borja",    apodo: "Borja",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "murua",    apodo: "Murua",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "juli1",    apodo: "Juli I",   pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "bartu",    apodo: "Bartu",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "labairu",  apodo: "Labairu",  pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "borja",    apodo: "Borja",    pj: 1, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "murua",    apodo: "Murua",    pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
   ],
 
@@ -95,7 +95,17 @@ window.DATOS = {
 
   partidos: [
     // ---------- 1ª VUELTA ----------
-    { id: "p01", fecha: "2026-10-10", hora: "15:00", local: "iruna",    visitante: "sestao",   piscina: "UPNA", resultado: null,
+    { id: "p01", fecha: "2026-10-10", hora: "15:00", local: "iruna",    visitante: "sestao",   piscina: "UPNA",
+      resultado: { local: 13, visitante: 12 },
+      parciales: [[4,3],[3,3],[4,1],[2,5]],
+      goleadores: [
+        { nombre: "Juli II", goles: 3 }, { nombre: "Beor", goles: 2 }, { nombre: "Borja", goles: 2 },
+        { nombre: "Iglesias", goles: 2 }, { nombre: "Ángel", goles: 1 }, { nombre: "Iker", goles: 1 },
+        { nombre: "Julen", goles: 1 }, { nombre: "Bartu", goles: 1 }
+      ],
+      stats: "https://clupik.pro/es/tournament/1343463/match/145658057/results",
+      cronica: { titulo: "Iglesias firma el 13-12 y el primer infarto de la temporada",
+                 texto: "Hay estrenos tranquilos y luego está el del Iruña. En dos minutos el Sestao ya mandaba 0-2 y en la grada de la UPNA más de uno empezó a echar cuentas. Falsa alarma: Juli II abrió la lata, Iker empató de penalti y Beor se marcó un doblete antes de acabar el primer cuarto (4-3).\n\nA partir de ahí, waterpolo del bueno. Defensa con dientes, un 71 % de acierto en superioridad y goles repartidos entre ocho jugadores, hasta cerrar el tercer cuarto con un 11-7 que olía a victoria tranquila. Tan tranquila que alguien debió de pensar que así no tenía gracia.\n\nEl último cuarto arrancó con alguna manzanada de la casa, los árbitros en modo ahorro de silbato y un tal Jon Ruiz decidido a hacer el partido de su vida: cuatro goles en el último cuarto, seis en total, y 12-12 a falta de cuatro minutos. La grada, con el corazón en la garganta.\n\nPero los héroes aparecen cuando hacen falta. Con 2:19 por jugar, Iglesias, que ya había marcado el 12-9, clavó el 13-12. Quedaba aguantar, y se aguantó: ni el tiempo muerto del Sestao a 15 segundos del final cambió nada. Primera jornada, primera victoria y primer infarto. Si toda la liga va a ser así, que la federación vaya mandando desfibriladores." },
       cartel: { foto: "img/carteles/j01.jpg", encuadre: "45% 45%", lema: "¡A por ellos!" } },
     { id: "p02", fecha: "2026-10-18", hora: "15:00", local: "lauro",    visitante: "iruna",    piscina: "Behekosoloa Kiroldegia", resultado: null,
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
