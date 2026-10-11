@@ -595,6 +595,49 @@
     if (location.hash.startsWith("#partido-")) history.replaceState(null, "", "#" + currentView);
   });
 
+  /* ---------- Vídeo destacado (Inicio) ---------- */
+  const VID = D.video;
+  const vDlg = $("#videoDialog");
+  const vPlayer = $("#videoPlayer");
+  let vContado = false;
+  if (VID && VID.archivo) {
+    const card = $("#videoCard");
+    card.innerHTML = `
+      <button type="button" class="video-card" data-video aria-haspopup="dialog">
+        <span class="vc-poster">
+          ${VID.poster ? `<img src="${esc(VID.poster)}" alt="" width="540" height="960" loading="lazy">` : ""}
+          <span class="vc-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg></span>
+          ${VID.duracion ? `<span class="vc-dur">${esc(VID.duracion)}</span>` : ""}
+        </span>
+        <span class="vc-text">
+          ${VID.etiqueta ? `<span class="eyebrow">${esc(VID.etiqueta)}</span>` : ""}
+          <span class="vc-title">${esc(VID.titulo)}</span>
+          ${VID.texto ? `<span class="vc-lead">${esc(VID.texto)}</span>` : ""}
+          <span class="btn">Ver el vídeo</span>
+        </span>
+      </button>`;
+    card.hidden = false;
+    vDlg.setAttribute("aria-label", `Vídeo «${VID.titulo}»`);
+  }
+
+  // El vídeo solo se descarga al abrirlo; al cerrar se pausa y al reabrir sigue donde iba
+  function abrirVideo() {
+    if (!vPlayer.getAttribute("src")) {
+      if (VID.poster) vPlayer.poster = VID.poster;
+      vPlayer.src = VID.archivo;
+    }
+    vDlg.showModal();
+    if (vPlayer.ended) vPlayer.currentTime = 0;
+    const pl = vPlayer.play();
+    if (pl && pl.catch) pl.catch(() => { /* el navegador pide otro toque */ });
+    if (!vContado) {
+      vContado = true;
+      contar("video-" + VID.archivo.replace(/^.*\/|\.mp4$/g, ""), `Vídeo «${VID.titulo}»`, true);
+    }
+  }
+  vDlg.addEventListener("click", (e) => { if (e.target === vDlg) vDlg.close(); });
+  vDlg.addEventListener("close", () => vPlayer.pause());
+
   /* ---------- Calendario .ics ---------- */
   function icsEvent(p) {
     const pad = (n) => String(n).padStart(2, "0");
@@ -698,6 +741,7 @@
   document.addEventListener("click", (e) => {
     const m = e.target.closest("[data-match]");
     if (m && !e.target.closest("a")) { location.hash = "partido-" + m.dataset.match; return; }
+    if (e.target.closest("[data-video]")) { abrirVideo(); return; }
     const ics = e.target.closest("[data-ics]");
     if (ics) { const p = byId[ics.dataset.ics]; downloadIcs([p], `partido-${p.fecha}.ics`); return; }
     const sh = e.target.closest("[data-share]");

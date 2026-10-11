@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=20261011-1">
+  <link rel="stylesheet" href="css/styles.css?v=20261011-2">
   <style>:root { padding-top: env(safe-area-inset-top, 0px); }</style>
 </head>
 <body>
@@ -43,6 +43,8 @@
           <h1 class="banner-title">Somos <span>Iruña</span></h1>
         </div>
       </div>
+
+      <div class="wrap" id="videoCard" hidden></div>
 
       <div class="wrap home-grid">
         <div class="home-col">
@@ -237,6 +239,14 @@
     </div>
   </dialog>
 
+  <!-- Vídeo destacado (pantalla completa, vertical) -->
+  <dialog id="videoDialog" class="video-dlg" aria-label="Vídeo">
+    <button type="button" class="icon-btn video-close" data-close aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <video id="videoPlayer" controls playsinline preload="none"></video>
+  </dialog>
+
   <!-- Estadísticas de visitas (GoatCounter, sin cookies). Solo en la web publicada:
        no cuenta las pruebas en local ni la vista previa de claude.ai. -->
   <script>
@@ -248,7 +258,7 @@
       document.head.appendChild(gc);
     }
   </script>
-  <script src="data/datos.js?v=20261011-1"></script>
-  <script src="js/app.js?v=20261011-1"></script>
+  <script src="data/datos.js?v=20261011-2"></script>
+  <script src="js/app.js?v=20261011-2"></script>
 </body>
 </html>

@@ -23,12 +23,24 @@
  *               encuadre y lema son opcionales (lema por defecto según casa/fuera)
  *
  * Equipo: escudo = ruta a su logo (img/escudos/<id>.png). Sin escudo se muestran sus siglas.
+ *
+ * Vídeo destacado de Inicio (opcional; borrar el bloque `video` para quitar la tarjeta):
+ *   { titulo, etiqueta, texto, archivo: "video/xxx.mp4", poster: "video/xxx.jpg", duracion: "1:21" }
  */
 
 window.DATOS = {
   temporada: "2026/27",
   competicion: "1ª División Masculina",
   nosotros: "iruna",
+
+  video: {
+    titulo: "Volvemos al agua",
+    etiqueta: "Videoclip · Temporada 26/27",
+    texto: "La vieja guardia ha vuelto. Dale al play con sonido.",
+    archivo: "video/volvemos-al-agua.mp4",
+    poster: "video/volvemos-al-agua.jpg",
+    duracion: "1:21",
+  },
 
   equipos: {
     iruna:     { nombre: "WP Iruña 9802",           corto: "Iruña",      sigla: "IRU" },
