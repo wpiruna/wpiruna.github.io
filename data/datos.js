@@ -169,11 +169,11 @@ window.DATOS = {
       { local: "larraina", visitante: "cdb",     lugar: "C.D. Larraina", fecha: "2026-10-11", hora: "13:45", resultado: { local: 17, visitante: 9 } }
     ] },
     { n: 2, fecha: "2026-10-17", partidos: [
-      { local: "cdb",     visitante: "leioa",   lugar: "Club Deportivo Bilbao", fecha: "2026-10-16", hora: "21:00", resultado: null },
+      { local: "cdb",     visitante: "leioa",   lugar: "Club Deportivo Bilbao", fecha: "2026-10-16", hora: "21:00", resultado: { local: 9, visitante: 15 } },
       { id: "p02" },
       { local: "sestao",  visitante: "donosti", lugar: "Polideportivo Las Llanas", fecha: "2027-01-23", hora: null, resultado: null },
-      { local: "urgara",  visitante: "urbatb",  lugar: "Azken Portu Kiroldegia", hora: "18:15", resultado: null },
-      { local: "np",      visitante: "askartza", lugar: "P.M. Muelle de Txurruka", hora: "17:00", resultado: null },
+      { local: "urgara",  visitante: "urbatb",  lugar: "Azken Portu Kiroldegia", hora: "18:15", resultado: { local: 10, visitante: 14 } },
+      { local: "np",      visitante: "askartza", lugar: "P.M. Muelle de Txurruka", hora: "17:00", resultado: { local: 12, visitante: 14 } },
       { local: "lautada", visitante: "larraina", lugar: "Complejo Deportivo Mendizorrotza", fecha: "2026-10-18", hora: "12:30", resultado: null }
     ] },
     { n: 3, fecha: "2026-10-24", partidos: [
@@ -257,7 +257,7 @@ window.DATOS = {
       { local: "urbatb",  visitante: "donosti", lugar: "Orbea Kiroldegia", hora: null, resultado: null }
     ] },
     { n: 13, fecha: "2027-01-23", partidos: [
-      { local: "donosti", visitante: "sestao",  lugar: "Altza Kiroldegia", fecha: "2026-10-17", hora: "18:15", resultado: null },
+      { local: "donosti", visitante: "sestao",  lugar: "Altza Kiroldegia", fecha: "2026-10-17", hora: "17:00", resultado: { local: 14, visitante: 8 } },
       { local: "askartza", visitante: "np",      lugar: "Claret Askartza Kiroldegia", hora: null, resultado: null },
       { local: "larraina", visitante: "lautada", lugar: "C.D. Larraina", hora: null, resultado: null },
       { local: "leioa",   visitante: "cdb",     lugar: "Sakoneta Kiroldegia", hora: null, resultado: null },
@@ -343,20 +343,20 @@ window.DATOS = {
    * Ordena las filas por posición. pj, g, e, p, gf, gc, pts.
    */
   clasificacion: {
-    actualizada: "2026-10-11", // p. ej. "2026-10-12"
+    actualizada: "2026-10-17", // p. ej. "2026-10-12"
     filas: [
-      { equipo: "np",       pj: 1, g: 1, e: 0, p: 0, gf: 25, gc: 5, pts: 3 },
-      { equipo: "leioa",    pj: 1, g: 1, e: 0, p: 0, gf: 22, gc: 9, pts: 3 },
-      { equipo: "askartza", pj: 1, g: 1, e: 0, p: 0, gf: 16, gc: 6, pts: 3 },
+      { equipo: "leioa",    pj: 2, g: 2, e: 0, p: 0, gf: 37, gc: 18, pts: 6 },
+      { equipo: "askartza", pj: 2, g: 2, e: 0, p: 0, gf: 30, gc: 18, pts: 6 },
+      { equipo: "urbatb",   pj: 2, g: 2, e: 0, p: 0, gf: 24, gc: 15, pts: 6 },
+      { equipo: "np",       pj: 2, g: 1, e: 0, p: 1, gf: 37, gc: 19, pts: 3 },
       { equipo: "larraina", pj: 1, g: 1, e: 0, p: 0, gf: 17, gc: 9, pts: 3 },
-      { equipo: "urbatb",   pj: 1, g: 1, e: 0, p: 0, gf: 10, gc: 5, pts: 3 },
+      { equipo: "donosti",  pj: 2, g: 1, e: 0, p: 1, gf: 19, gc: 18, pts: 3 },
       { equipo: "iruna",    pj: 1, g: 1, e: 0, p: 0, gf: 13, gc: 12, pts: 3 },
-      { equipo: "sestao",   pj: 1, g: 0, e: 0, p: 1, gf: 12, gc: 13, pts: 0 },
-      { equipo: "donosti",  pj: 1, g: 0, e: 0, p: 1, gf: 5, gc: 10, pts: 0 },
-      { equipo: "cdb",      pj: 1, g: 0, e: 0, p: 1, gf: 9, gc: 17, pts: 0 },
+      { equipo: "sestao",   pj: 2, g: 0, e: 0, p: 2, gf: 20, gc: 27, pts: 0 },
       { equipo: "lautada",  pj: 1, g: 0, e: 0, p: 1, gf: 6, gc: 16, pts: 0 },
       { equipo: "lauro",    pj: 1, g: 0, e: 0, p: 1, gf: 9, gc: 22, pts: 0 },
-      { equipo: "urgara",   pj: 1, g: 0, e: 0, p: 1, gf: 5, gc: 25, pts: 0 }
+      { equipo: "cdb",      pj: 2, g: 0, e: 0, p: 2, gf: 18, gc: 32, pts: 0 },
+      { equipo: "urgara",   pj: 2, g: 0, e: 0, p: 2, gf: 15, gc: 39, pts: 0 }
     ]
   }
 };
