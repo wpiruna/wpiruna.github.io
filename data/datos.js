@@ -88,7 +88,8 @@ window.DATOS = {
     { id: "labairu",  apodo: "Labairu",  pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "borja",    apodo: "Borja",    pj: 1, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "murua",    apodo: "Murua",    pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
+    { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "echandi",  apodo: "Echandi",  pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
   ],
 
   piscinas: {
