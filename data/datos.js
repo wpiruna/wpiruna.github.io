@@ -71,25 +71,25 @@ window.DATOS = {
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [
-    { id: "larry",    apodo: "Larry",    portero: true, pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "angel",    apodo: "Ángel",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "beor",     apodo: "Beor",     pj: 1, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "larry",    apodo: "Larry",    portero: true, pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "angel",    apodo: "Ángel",    pj: 2, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "beor",     apodo: "Beor",     pj: 2, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0 },
     { id: "juli2",    apodo: "Juli II",  pj: 1, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "aritz",    apodo: "Aritz",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iker",     apodo: "Iker",     pj: 1, goles: 1, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "tainta",   apodo: "Tainta",   pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iglesias", apodo: "Iglesias", pj: 1, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "eguilaz",  apodo: "Eguilaz",  pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "iker",     apodo: "Iker",     pj: 2, goles: 1, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "tainta",   apodo: "Tainta",   pj: 1, goles: 1, penMarcados: 0, penFallados: 1, penCometidos: 1, rojas: 0 },
+    { id: "iglesias", apodo: "Iglesias", pj: 2, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "eguilaz",  apodo: "Eguilaz",  pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "julen",    apodo: "Julen",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
-    { id: "reclu",    apodo: "Reclu",    pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "rafa",     apodo: "Rafa",     pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "juli1",    apodo: "Juli I",   pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "reclu",    apodo: "Reclu",    pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
+    { id: "rafa",     apodo: "Rafa",     pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "juli1",    apodo: "Juli I",   pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "bartu",    apodo: "Bartu",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "labairu",  apodo: "Labairu",  pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "borja",    apodo: "Borja",    pj: 1, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "murua",    apodo: "Murua",    pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "labairu",  apodo: "Labairu",  pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0 },
+    { id: "borja",    apodo: "Borja",    pj: 2, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 3, rojas: 0 },
+    { id: "murua",    apodo: "Murua",    pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "echandi",  apodo: "Echandi",  pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
+    { id: "echandi",  apodo: "Echandi",  pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
   ],
 
   piscinas: {
@@ -129,7 +129,15 @@ window.DATOS = {
       cartel: { foto: "img/carteles/j04.jpg", encuadre: "15% 50%" } },
     { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j05.jpg", encuadre: "52% 30%" } },
-    { id: "p06", fecha: "2026-10-18", hora: "10:30", local: "askartza", visitante: "iruna",    piscina: "Claret Askartza Kiroldegia", resultado: null,
+    { id: "p06", fecha: "2026-10-18", hora: "10:30", local: "askartza", visitante: "iruna",    piscina: "Claret Askartza Kiroldegia",
+      resultado: { local: 12, visitante: 3 },
+      parciales: [[3,1],[3,0],[3,1],[3,1]],
+      goleadores: [
+        { nombre: "Beor", goles: 1 }, { nombre: "Eguilaz", goles: 1 }, { nombre: "Tainta", goles: 1 }
+      ],
+      stats: "https://clupik.pro/es/tournament/1343463/match/145658086/results",
+      cronica: { titulo: "Larry, estelar en Askartza: 12-3 y a por Lauro",
+                 texto: "Domingo, 10:30 de la mañana, y enfrente el Askartza B: joven, rápido y con dos victorias en el bolsillo. El Iruña llegaba con la enfermería llena y el banquillo corto, sin Juli II, Julen ni Aritz, con Rafa tocado del hombro e Iglesias de la espalda. Y aun así el primero en celebrar fue Beor, que a los 32 segundos ya había puesto el 0-1. Ese ratito de liderato no nos lo quita nadie.\n\nDuró lo que duró. Askartza le dio la vuelta en el último minuto y medio del primer cuarto (3-1) y a partir de ahí impuso piernas y ritmo: ocho goles seguidos hasta el 8-1 del tercer cuarto, cuando Eguilaz cortó la sangría con el 8-2. Desde ese momento el partido fue suyo, y no hay que darle más vueltas.\n\nLo que sí hay que contar es lo de Larry. Askartza tiró seis penaltis y marcó uno. Jugó siete superioridades y marcó una. Y por en medio, un uno contra uno tras otro que Larry fue sacando con una mano, con la otra y con lo que hiciera falta. Sin él, el marcador habría sido de otro deporte. En el último cuarto se le salió un dedo y tuvo que dejar el agua; entró Iglesias, con su espalda dolorida y el gorro 13, a defender la portería. Eso es tener equipo.\n\nEl resto del parte: estreno de Echandi con el Iruña, expulsión de bautismo incluida, y una mañana completita de Tainta, que falló un penalti, cometió otro y marcó el 12-3 quince segundos después del tiempo muerto de Miriam. Con eso y los tres penaltis que cometió Borja, los dos se reparten el liderato del Manzano del año. El vestuario, además, le apunta una manzanada a Reclu por fallar una clarísima de esas que no se fallan. Y ahora, hielo para el dedo de Larry, paciencia para la espalda de Iglesias y la mirada en Loiu: a las tres toca Lauro, y ese es el partido que de verdad había que ganar hoy.\n\nÚltima hora: buenas noticias desde la enfermería. Lo de Larry no es rotura, solo se le salió la falange del meñique. Ya está mejor y pronto lo tendremos de vuelta bajo los palos." },
       cartel: { foto: "img/carteles/j06.jpg", encuadre: "25% 50%" } },
     { id: "p07", fecha: "2026-11-22", hora: "11:00", local: "iruna",    visitante: "larraina", piscina: "UPNA", resultado: null },
     { id: "p08", fecha: "2027-02-13", hora: "13:30", local: "leioa",    visitante: "iruna",    piscina: "Sakoneta Kiroldegia", resultado: null },
@@ -344,15 +352,15 @@ window.DATOS = {
    * Ordena las filas por posición. pj, g, e, p, gf, gc, pts.
    */
   clasificacion: {
-    actualizada: "2026-10-17", // p. ej. "2026-10-12"
+    actualizada: "2026-10-18", // p. ej. "2026-10-12"
     filas: [
+      { equipo: "askartza", pj: 3, g: 3, e: 0, p: 0, gf: 42, gc: 21, pts: 9 },
       { equipo: "leioa",    pj: 2, g: 2, e: 0, p: 0, gf: 37, gc: 18, pts: 6 },
-      { equipo: "askartza", pj: 2, g: 2, e: 0, p: 0, gf: 30, gc: 18, pts: 6 },
       { equipo: "urbatb",   pj: 2, g: 2, e: 0, p: 0, gf: 24, gc: 15, pts: 6 },
       { equipo: "np",       pj: 2, g: 1, e: 0, p: 1, gf: 37, gc: 19, pts: 3 },
       { equipo: "larraina", pj: 1, g: 1, e: 0, p: 0, gf: 17, gc: 9, pts: 3 },
       { equipo: "donosti",  pj: 2, g: 1, e: 0, p: 1, gf: 19, gc: 18, pts: 3 },
-      { equipo: "iruna",    pj: 1, g: 1, e: 0, p: 0, gf: 13, gc: 12, pts: 3 },
+      { equipo: "iruna",    pj: 2, g: 1, e: 0, p: 1, gf: 16, gc: 24, pts: 3 },
       { equipo: "sestao",   pj: 2, g: 0, e: 0, p: 2, gf: 20, gc: 27, pts: 0 },
       { equipo: "lautada",  pj: 1, g: 0, e: 0, p: 1, gf: 6, gc: 16, pts: 0 },
       { equipo: "lauro",    pj: 1, g: 0, e: 0, p: 1, gf: 9, gc: 22, pts: 0 },
