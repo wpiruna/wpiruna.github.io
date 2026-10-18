@@ -125,7 +125,7 @@ window.DATOS = {
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
     { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" } },
-    { id: "p04", fecha: "2026-10-31", hora: null, local: "lautada",  visitante: "iruna",    piscina: "Complejo Deportivo Mendizorrotza", resultado: null,
+    { id: "p04", fecha: "2026-10-31", hora: "16:30", local: "lautada",  visitante: "iruna",    piscina: "Complejo Deportivo Mendizorrotza", resultado: null,
       cartel: { foto: "img/carteles/j04.jpg", encuadre: "15% 50%" } },
     { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j05.jpg", encuadre: "52% 30%" } },
