@@ -71,25 +71,25 @@ window.DATOS = {
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [
-    { id: "larry",    apodo: "Larry",    portero: true, pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "angel",    apodo: "Ángel",    pj: 2, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "beor",     apodo: "Beor",     pj: 2, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0 },
+    { id: "larry",    apodo: "Larry",    portero: true, pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "angel",    apodo: "Ángel",    pj: 3, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "beor",     apodo: "Beor",     pj: 3, goles: 5, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
     { id: "juli2",    apodo: "Juli II",  pj: 1, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "aritz",    apodo: "Aritz",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iker",     apodo: "Iker",     pj: 2, goles: 1, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "tainta",   apodo: "Tainta",   pj: 1, goles: 1, penMarcados: 0, penFallados: 1, penCometidos: 1, rojas: 0 },
-    { id: "iglesias", apodo: "Iglesias", pj: 2, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "iker",     apodo: "Iker",     pj: 3, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "tainta",   apodo: "Tainta",   pj: 2, goles: 2, penMarcados: 0, penFallados: 1, penCometidos: 2, rojas: 0 },
+    { id: "iglesias", apodo: "Iglesias", pj: 3, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "eguilaz",  apodo: "Eguilaz",  pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "julen",    apodo: "Julen",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
-    { id: "reclu",    apodo: "Reclu",    pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
-    { id: "rafa",     apodo: "Rafa",     pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "juli1",    apodo: "Juli I",   pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "reclu",    apodo: "Reclu",    pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
+    { id: "rafa",     apodo: "Rafa",     pj: 2, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "juli1",    apodo: "Juli I",   pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "bartu",    apodo: "Bartu",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "labairu",  apodo: "Labairu",  pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0 },
-    { id: "borja",    apodo: "Borja",    pj: 2, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 3, rojas: 0 },
-    { id: "murua",    apodo: "Murua",    pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "labairu",  apodo: "Labairu",  pj: 3, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
+    { id: "borja",    apodo: "Borja",    pj: 3, goles: 4, penMarcados: 1, penFallados: 0, penCometidos: 3, rojas: 0 },
+    { id: "murua",    apodo: "Murua",    pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "echandi",  apodo: "Echandi",  pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
+    { id: "echandi",  apodo: "Echandi",  pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
   ],
 
   piscinas: {
@@ -121,7 +121,15 @@ window.DATOS = {
       cronica: { titulo: "Iglesias firma el 13-12 y el primer infarto de la temporada",
                  texto: "Hay estrenos tranquilos y luego está el del Iruña. En dos minutos el Sestao ya mandaba 0-2 y en la grada de la UPNA más de uno empezó a echar cuentas. Falsa alarma: Juli II abrió la lata, Iker empató de penalti y Beor se marcó un doblete antes de acabar el primer cuarto (4-3). En la grada ya se escuchaba «¡Beorlegui, MVP!».\n\nA partir de ahí, waterpolo del bueno. Defensa con dientes, un 71 % de acierto en superioridad y goles repartidos entre ocho jugadores, hasta cerrar el tercer cuarto con un 11-7 que olía a victoria tranquila. Tan tranquila que alguien debió de pensar que así no tenía gracia.\n\nEl último cuarto arrancó con alguna manzanada de la casa, los árbitros en modo ahorro de silbato y un tal Jon Ruiz decidido a hacer el partido de su vida: cuatro goles en el último cuarto, seis en total, y 12-12 a falta de cuatro minutos. La grada, con el corazón en la garganta.\n\nPero los héroes aparecen cuando hacen falta. Con 2:19 por jugar, Iglesias, que ya había marcado el 12-9, clavó el 13-12. Quedaba aguantar, y se aguantó: ni el tiempo muerto del Sestao a 15 segundos del final cambió nada. Primera jornada, primera victoria y primer infarto. Si toda la liga va a ser así, que la federación vaya mandando desfibriladores." },
       cartel: { foto: "img/carteles/j01.jpg", encuadre: "45% 45%", lema: "¡A por ellos!" } },
-    { id: "p02", fecha: "2026-10-18", hora: "15:00", local: "lauro",    visitante: "iruna",    piscina: "Behekosoloa Kiroldegia", resultado: null,
+    { id: "p02", fecha: "2026-10-18", hora: "15:00", local: "lauro",    visitante: "iruna",    piscina: "Behekosoloa Kiroldegia",
+      resultado: { local: 11, visitante: 9 },
+      parciales: [[3,2],[2,3],[3,2],[3,2]],
+      goleadores: [
+        { nombre: "Beor", goles: 2 }, { nombre: "Borja", goles: 2 }, { nombre: "Ángel", goles: 1 },
+        { nombre: "Iker", goles: 1 }, { nombre: "Tainta", goles: 1 }, { nombre: "Labairu", goles: 1 },
+        { nombre: "Rafa", goles: 1 }
+      ],
+      stats: "https://clupik.pro/es/tournament/1343463/match/145658060/results",
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
     { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" } },
@@ -183,7 +191,7 @@ window.DATOS = {
       { local: "sestao",  visitante: "donosti", lugar: "Polideportivo Las Llanas", fecha: "2027-01-23", hora: null, resultado: null },
       { local: "urgara",  visitante: "urbatb",  lugar: "Azken Portu Kiroldegia", hora: "18:15", resultado: { local: 10, visitante: 14 } },
       { local: "np",      visitante: "askartza", lugar: "P.M. Muelle de Txurruka", hora: "17:00", resultado: { local: 12, visitante: 14 } },
-      { local: "lautada", visitante: "larraina", lugar: "Complejo Deportivo Mendizorrotza", fecha: "2026-10-18", hora: "12:30", resultado: null }
+      { local: "lautada", visitante: "larraina", lugar: "Complejo Deportivo Mendizorrotza", fecha: "2026-10-18", hora: "12:30", resultado: { local: 6, visitante: 13 } }
     ] },
     { n: 3, fecha: "2026-10-24", partidos: [
       { local: "urbatb",  visitante: "sestao",  lugar: "Orbea Kiroldegia", fecha: "2026-10-23", hora: "21:15", resultado: null },
@@ -356,15 +364,15 @@ window.DATOS = {
     filas: [
       { equipo: "askartza", pj: 3, g: 3, e: 0, p: 0, gf: 42, gc: 21, pts: 9 },
       { equipo: "leioa",    pj: 2, g: 2, e: 0, p: 0, gf: 37, gc: 18, pts: 6 },
+      { equipo: "larraina", pj: 2, g: 2, e: 0, p: 0, gf: 30, gc: 15, pts: 6 },
       { equipo: "urbatb",   pj: 2, g: 2, e: 0, p: 0, gf: 24, gc: 15, pts: 6 },
+      { equipo: "lauro",    pj: 2, g: 1, e: 0, p: 1, gf: 20, gc: 31, pts: 3 },
       { equipo: "np",       pj: 2, g: 1, e: 0, p: 1, gf: 37, gc: 19, pts: 3 },
-      { equipo: "larraina", pj: 1, g: 1, e: 0, p: 0, gf: 17, gc: 9, pts: 3 },
       { equipo: "donosti",  pj: 2, g: 1, e: 0, p: 1, gf: 19, gc: 18, pts: 3 },
-      { equipo: "iruna",    pj: 2, g: 1, e: 0, p: 1, gf: 16, gc: 24, pts: 3 },
+      { equipo: "iruna",    pj: 3, g: 1, e: 0, p: 2, gf: 25, gc: 35, pts: 3 },
       { equipo: "sestao",   pj: 2, g: 0, e: 0, p: 2, gf: 20, gc: 27, pts: 0 },
-      { equipo: "lautada",  pj: 1, g: 0, e: 0, p: 1, gf: 6, gc: 16, pts: 0 },
-      { equipo: "lauro",    pj: 1, g: 0, e: 0, p: 1, gf: 9, gc: 22, pts: 0 },
       { equipo: "cdb",      pj: 2, g: 0, e: 0, p: 2, gf: 18, gc: 32, pts: 0 },
+      { equipo: "lautada",  pj: 2, g: 0, e: 0, p: 2, gf: 12, gc: 29, pts: 0 },
       { equipo: "urgara",   pj: 2, g: 0, e: 0, p: 2, gf: 15, gc: 39, pts: 0 }
     ]
   }
