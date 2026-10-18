@@ -71,7 +71,7 @@ window.DATOS = {
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [
-    { id: "larry",    apodo: "Larry",    portero: true, pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "larry",    apodo: "Larry",    portero: true, pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "angel",    apodo: "Ángel",    pj: 3, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "beor",     apodo: "Beor",     pj: 3, goles: 5, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
     { id: "juli2",    apodo: "Juli II",  pj: 1, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
@@ -131,7 +131,7 @@ window.DATOS = {
       ],
       stats: "https://clupik.pro/es/tournament/1343463/match/145658060/results",
       cronica: { titulo: "Se escapó en Loiu: Lauro 11, Iruña 9",
-                 texto: "Segundo partido del día y con todo en contra. A las bajas de Juli II, Julen, Aritz y Eguilaz se sumó la de Larry, fuera del agua por el dedo de la mañana. Bajo los palos se puso Juan Olave y cumplió con nota: Lauro solo marcó una de sus ocho superioridades y, con 9-8 en el último cuarto, se quedó sin el gol de un penalti.\n\nEl partido fue igualado de principio a fin. Lauro se puso 3-1 y 5-3, y el Iruña respondió las dos veces: Beor firmó el 5-5 del descanso, y Tainta y Ángel el 7-7 del tercer cuarto. En ataque, cuatro de cinco superioridades y goles de siete jugadores, Rafa incluido, que jugó con el hombro tocado.\n\nPero cada vez que nos acercábamos, Lauro encontraba respuesta. Iker puso el 9-8 y Borja el 10-9 a falta de 2:23; Unzilla cerró el 11-9 a 16 segundos del final. Dos partidos en un día, la enfermería llena y los puntos para Loiu. Toca recuperar a la gente: el domingo 25 viene el Bilbao a la UPNA." },
+                 texto: "Segundo partido del día y con todo en contra. A las bajas de Juli II, Julen, Aritz y Eguilaz se sumó la de Larry, fuera del agua por el dedo de la mañana. Bajo los palos se puso Juan Olabe y cumplió con nota: Lauro solo marcó una de sus ocho superioridades y, con 9-8 en el último cuarto, se quedó sin el gol de un penalti.\n\nEl partido fue igualado de principio a fin. Lauro se puso 3-1 y 5-3, y el Iruña respondió las dos veces: Beor firmó el 5-5 del descanso, y Tainta y Ángel el 7-7 del tercer cuarto. En ataque, cuatro de cinco superioridades y goles de siete jugadores, Rafa incluido, que jugó con el hombro tocado.\n\nPero cada vez que nos acercábamos, Lauro encontraba respuesta. Iker puso el 9-8 y Borja el 10-9 a falta de 2:23; Unzilla cerró el 11-9 a 16 segundos del final. Dos partidos en un día, la enfermería llena y los puntos para Loiu. Toca recuperar a la gente: el domingo 25 viene el Bilbao a la UPNA." },
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
     { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" } },
