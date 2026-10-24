@@ -196,11 +196,11 @@ window.DATOS = {
       { local: "lautada", visitante: "larraina", lugar: "Complejo Deportivo Mendizorrotza", fecha: "2026-10-18", hora: "12:30", resultado: { local: 6, visitante: 13 } }
     ] },
     { n: 3, fecha: "2026-10-24", partidos: [
-      { local: "urbatb",  visitante: "sestao",  lugar: "Orbea Kiroldegia", fecha: "2026-10-23", hora: "21:15", resultado: null },
+      { local: "urbatb",  visitante: "sestao",  lugar: "Orbea Kiroldegia", fecha: "2026-10-23", hora: "21:15", resultado: { local: 13, visitante: 11 } },
       { id: "p03" },
       { local: "askartza", visitante: "urgara",  lugar: "Claret Askartza Kiroldegia", hora: "18:15", resultado: null },
       { local: "larraina", visitante: "np",      lugar: "C.D. Larraina", fecha: "2026-10-25", hora: "16:30", resultado: null },
-      { local: "leioa",   visitante: "lautada", lugar: "Sakoneta Kiroldegia", hora: "13:20", resultado: null },
+      { local: "leioa",   visitante: "lautada", lugar: "Sakoneta Kiroldegia", hora: "13:20", resultado: { local: 15, visitante: 9 } },
       { local: "donosti", visitante: "lauro",   lugar: "Altza Kiroldegia", hora: "18:30", resultado: null }
     ] },
     { n: 4, fecha: "2026-10-31", partidos: [
@@ -362,19 +362,19 @@ window.DATOS = {
    * Ordena las filas por posición. pj, g, e, p, gf, gc, pts.
    */
   clasificacion: {
-    actualizada: "2026-10-18", // p. ej. "2026-10-12"
+    actualizada: "2026-10-24", // p. ej. "2026-10-12"
     filas: [
+      { equipo: "leioa",    pj: 3, g: 3, e: 0, p: 0, gf: 52, gc: 27, pts: 9 },
       { equipo: "askartza", pj: 3, g: 3, e: 0, p: 0, gf: 42, gc: 21, pts: 9 },
-      { equipo: "leioa",    pj: 2, g: 2, e: 0, p: 0, gf: 37, gc: 18, pts: 6 },
+      { equipo: "urbatb",   pj: 3, g: 3, e: 0, p: 0, gf: 37, gc: 26, pts: 9 },
       { equipo: "larraina", pj: 2, g: 2, e: 0, p: 0, gf: 30, gc: 15, pts: 6 },
-      { equipo: "urbatb",   pj: 2, g: 2, e: 0, p: 0, gf: 24, gc: 15, pts: 6 },
       { equipo: "lauro",    pj: 2, g: 1, e: 0, p: 1, gf: 20, gc: 31, pts: 3 },
+      { equipo: "iruna",    pj: 3, g: 1, e: 0, p: 2, gf: 25, gc: 35, pts: 3 },
       { equipo: "np",       pj: 2, g: 1, e: 0, p: 1, gf: 37, gc: 19, pts: 3 },
       { equipo: "donosti",  pj: 2, g: 1, e: 0, p: 1, gf: 19, gc: 18, pts: 3 },
-      { equipo: "iruna",    pj: 3, g: 1, e: 0, p: 2, gf: 25, gc: 35, pts: 3 },
-      { equipo: "sestao",   pj: 2, g: 0, e: 0, p: 2, gf: 20, gc: 27, pts: 0 },
+      { equipo: "sestao",   pj: 3, g: 0, e: 0, p: 3, gf: 31, gc: 40, pts: 0 },
       { equipo: "cdb",      pj: 2, g: 0, e: 0, p: 2, gf: 18, gc: 32, pts: 0 },
-      { equipo: "lautada",  pj: 2, g: 0, e: 0, p: 2, gf: 12, gc: 29, pts: 0 },
+      { equipo: "lautada",  pj: 3, g: 0, e: 0, p: 3, gf: 21, gc: 44, pts: 0 },
       { equipo: "urgara",   pj: 2, g: 0, e: 0, p: 2, gf: 15, gc: 39, pts: 0 }
     ]
   }
