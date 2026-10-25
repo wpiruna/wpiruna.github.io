@@ -74,24 +74,24 @@ window.DATOS = {
    */
   plantilla: [
     { id: "larry",    apodo: "Larry",    portero: true, pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "angel",    apodo: "Ángel",    pj: 3, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "beor",     apodo: "Beor",     pj: 3, goles: 5, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
+    { id: "angel",    apodo: "Ángel",    pj: 4, goles: 4, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "beor",     apodo: "Beor",     pj: 4, goles: 6, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
     { id: "juli2",    apodo: "Juli II",  pj: 1, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "aritz",    apodo: "Aritz",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iker",     apodo: "Iker",     pj: 3, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "tainta",   apodo: "Tainta",   pj: 2, goles: 2, penMarcados: 0, penFallados: 1, penCometidos: 2, rojas: 0 },
+    { id: "iker",     apodo: "Iker",     pj: 4, goles: 4, penMarcados: 3, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "tainta",   apodo: "Tainta",   pj: 3, goles: 6, penMarcados: 0, penFallados: 1, penCometidos: 2, rojas: 0, manzanadasExtra: 1 },
     { id: "iglesias", apodo: "Iglesias", pj: 3, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "eguilaz",  apodo: "Eguilaz",  pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "julen",    apodo: "Julen",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
-    { id: "reclu",    apodo: "Reclu",    pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
-    { id: "rafa",     apodo: "Rafa",     pj: 2, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "juli1",    apodo: "Juli I",   pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "julen",    apodo: "Julen",    pj: 2, goles: 4, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0, manzanadasExtra: 2 },
+    { id: "reclu",    apodo: "Reclu",    pj: 4, goles: 1, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
+    { id: "rafa",     apodo: "Rafa",     pj: 3, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
+    { id: "juli1",    apodo: "Juli I",   pj: 4, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
     { id: "bartu",    apodo: "Bartu",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "labairu",  apodo: "Labairu",  pj: 3, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
-    { id: "borja",    apodo: "Borja",    pj: 3, goles: 4, penMarcados: 1, penFallados: 0, penCometidos: 3, rojas: 0 },
-    { id: "murua",    apodo: "Murua",    pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "labairu",  apodo: "Labairu",  pj: 4, goles: 5, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
+    { id: "borja",    apodo: "Borja",    pj: 4, goles: 5, penMarcados: 1, penFallados: 0, penCometidos: 3, rojas: 0 },
+    { id: "murua",    apodo: "Murua",    pj: 4, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0, manzanadasExtra: 1 },
     { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "echandi",  apodo: "Echandi",  pj: 2, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 }
+    { id: "echandi",  apodo: "Echandi",  pj: 3, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 }
   ],
 
   piscinas: {
@@ -135,7 +135,18 @@ window.DATOS = {
       cronica: { titulo: "Se escapó en Loiu: Lauro 11, Iruña 9",
                  texto: "Segundo partido del día y con todo en contra. A las bajas de Juli II, Julen, Aritz y Eguilaz se sumó la de Larry, fuera del agua por el dedo de la mañana. Bajo los palos se puso Juan Olabe y cumplió con nota: Lauro solo marcó una de sus ocho superioridades y, con 9-8 en el último cuarto, se quedó sin el gol de un penalti.\n\nEl partido fue igualado de principio a fin. Lauro se puso 3-1 y 5-3, y el Iruña respondió las dos veces: Beor firmó el 5-5 del descanso, y Tainta y Ángel el 7-7 del tercer cuarto. En ataque, cuatro de cinco superioridades y goles de siete jugadores, Rafa incluido, que jugó con el hombro tocado.\n\nPero cada vez que nos acercábamos, Lauro encontraba respuesta. Iker puso el 9-8 y Borja el 10-9 a falta de 2:23; Unzilla cerró el 11-9 a 16 segundos del final. Dos partidos en un día, la enfermería llena y los puntos para Loiu. Toca recuperar a la gente: el domingo 25 viene el Bilbao a la UPNA." },
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
-    { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA", resultado: null,
+    { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA",
+      resultado: { local: 21, visitante: 10 },
+      parciales: [[6,3],[4,1],[5,3],[6,3]],
+      goleadores: [
+        { nombre: "Tainta", goles: 4 }, { nombre: "Labairu", goles: 4 }, { nombre: "Julen", goles: 3 },
+        { nombre: "Ángel", goles: 2 }, { nombre: "Echandi", goles: 2 }, { nombre: "Iker", goles: 2 },
+        { nombre: "Beor", goles: 1 }, { nombre: "Borja", goles: 1 }, { nombre: "Rafa", goles: 1 },
+        { nombre: "Reclu", goles: 1 }
+      ],
+      stats: "https://clupik.pro/es/tournament/1343463/match/145658067/results",
+      cronica: { titulo: "Iruña 21, Bilbao 10: festival en la UPNA, con manzanas de postre",
+                 texto: "Hay domingos en los que el waterpolo se pone serio y domingos como el de hoy. A los 20 segundos Julen ya había estrenado el marcador y, aunque el Bilbao empató enseguida, el primer cuarto se cerró 6-3 con Iker clavando un penalti a ocho segundos de la bocina. Al descanso, 10-4, y en la grada de la UPNA ya se hablaba más del vermú que del partido.\n\nAtrás, Juan Olabe volvió a ponerse el gorro 1 y el Bilbao se encontró con un muro: falló un penalti con 6-3 y solo sacó provecho de 5 de sus 13 superioridades. Mientras tanto, arriba, el Iruña se marcó un 9-1 entre el 5-3 y el 14-4 que dejó el partido visto para sentencia antes de acabar el tercer cuarto.\n\nLo de los goles fue un reparto de los que gustan: diez goleadores distintos. Tainta y Labairu firmaron cuatro cada uno (tres de Labairu en el último cuarto, que es cuando se cobran las horas extra) y Julen hizo tres. Echandi estrenó su cuenta con el Iruña por partida doble, y Reclu, el de la clarísima de Askartza, se quitó la espina con su primer gol de la temporada, de penalti y sin temblar. Cuatro penaltis a favor, cuatro dentro: dos de Iker, uno de Echandi y otro de Reclu.\n\nPero esto es el Iruña, y ni ganando de once nos libramos del Manzano. El vestuario reparte manzanadas a Murua, por coleccionar tres expulsiones y ver el final desde el banquillo; a Tainta y a Juli I, por regalarle el balón al contrario como quien reparte caramelos en la cabalgata; a Rafa, por no sacársela bien; y a Julen, que a un metro del portero decidió que lo más sensato era pasársela a él. Con esto Tainta sale del partido como máximo goleador del equipo, empatado con Beor, y líder del Manzano del año. Hay que valer.\n\nPrimera goleada de la temporada, 6 puntos, sextos en la tabla y la diferencia de goles otra vez en positivo. El sábado toca Vitoria: Lautada, a las 16:30 en Mendizorrotza. Que alguien guarde las manzanas para el viaje." },
       cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" },
       convocatoria: "img/convocatorias/j03-bilbao.jpg" },
     { id: "p04", fecha: "2026-10-31", hora: "16:30", local: "lautada",  visitante: "iruna",    piscina: "Complejo Deportivo Mendizorrotza", resultado: null,
@@ -365,19 +376,19 @@ window.DATOS = {
    * Ordena las filas por posición. pj, g, e, p, gf, gc, pts.
    */
   clasificacion: {
-    actualizada: "2026-10-24", // p. ej. "2026-10-12"
+    actualizada: "2026-10-25", // p. ej. "2026-10-12"
     filas: [
       { equipo: "askartza", pj: 4, g: 4, e: 0, p: 0, gf: 59, gc: 28, pts: 12 },
       { equipo: "leioa",    pj: 3, g: 3, e: 0, p: 0, gf: 52, gc: 27, pts: 9 },
       { equipo: "urbatb",   pj: 3, g: 3, e: 0, p: 0, gf: 37, gc: 26, pts: 9 },
       { equipo: "larraina", pj: 2, g: 2, e: 0, p: 0, gf: 30, gc: 15, pts: 6 },
       { equipo: "donosti",  pj: 3, g: 2, e: 0, p: 1, gf: 32, gc: 26, pts: 6 },
-      { equipo: "lauro",    pj: 3, g: 1, e: 0, p: 2, gf: 28, gc: 44, pts: 3 },
-      { equipo: "iruna",    pj: 3, g: 1, e: 0, p: 2, gf: 25, gc: 35, pts: 3 },
+      { equipo: "iruna",    pj: 4, g: 2, e: 0, p: 2, gf: 46, gc: 45, pts: 6 },
       { equipo: "np",       pj: 2, g: 1, e: 0, p: 1, gf: 37, gc: 19, pts: 3 },
+      { equipo: "lauro",    pj: 3, g: 1, e: 0, p: 2, gf: 28, gc: 44, pts: 3 },
       { equipo: "sestao",   pj: 3, g: 0, e: 0, p: 3, gf: 31, gc: 40, pts: 0 },
-      { equipo: "cdb",      pj: 2, g: 0, e: 0, p: 2, gf: 18, gc: 32, pts: 0 },
       { equipo: "lautada",  pj: 3, g: 0, e: 0, p: 3, gf: 21, gc: 44, pts: 0 },
+      { equipo: "cdb",      pj: 3, g: 0, e: 0, p: 3, gf: 28, gc: 53, pts: 0 },
       { equipo: "urgara",   pj: 3, g: 0, e: 0, p: 3, gf: 22, gc: 56, pts: 0 }
     ]
   }
