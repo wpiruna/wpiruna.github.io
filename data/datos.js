@@ -20,6 +20,8 @@
  *   nota        opcional: aviso que se muestra en la ficha
  *   cartel      opcional: cartel de la ficha con foto
  *               { foto: "img/carteles/j01.jpg", encuadre: "50% 40%", lema: "¡A llenar la grada!" }
+ *   convocatoria opcional: imagen de la convocatoria (1080×1920), sale en la ficha y en Inicio
+ *               "img/convocatorias/j03-bilbao.jpg"
  *               encuadre y lema son opcionales (lema por defecto según casa/fuera)
  *
  * Equipo: escudo = ruta a su logo (img/escudos/<id>.png). Sin escudo se muestran sus siglas.
@@ -134,7 +136,8 @@ window.DATOS = {
                  texto: "Segundo partido del día y con todo en contra. A las bajas de Juli II, Julen, Aritz y Eguilaz se sumó la de Larry, fuera del agua por el dedo de la mañana. Bajo los palos se puso Juan Olabe y cumplió con nota: Lauro solo marcó una de sus ocho superioridades y, con 9-8 en el último cuarto, se quedó sin el gol de un penalti.\n\nEl partido fue igualado de principio a fin. Lauro se puso 3-1 y 5-3, y el Iruña respondió las dos veces: Beor firmó el 5-5 del descanso, y Tainta y Ángel el 7-7 del tercer cuarto. En ataque, cuatro de cinco superioridades y goles de siete jugadores, Rafa incluido, que jugó con el hombro tocado.\n\nPero cada vez que nos acercábamos, Lauro encontraba respuesta. Iker puso el 9-8 y Borja el 10-9 a falta de 2:23; Unzilla cerró el 11-9 a 16 segundos del final. Dos partidos en un día, la enfermería llena y los puntos para Loiu. Toca recuperar a la gente: el domingo 25 viene el Bilbao a la UPNA." },
       cartel: { foto: "img/carteles/j02.jpg", encuadre: "35% 40%" } },
     { id: "p03", fecha: "2026-10-25", hora: "11:00", local: "iruna",    visitante: "cdb",      piscina: "UPNA", resultado: null,
-      cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" } },
+      cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" },
+      convocatoria: "img/convocatorias/j03-bilbao.jpg" },
     { id: "p04", fecha: "2026-10-31", hora: "16:30", local: "lautada",  visitante: "iruna",    piscina: "Complejo Deportivo Mendizorrotza", resultado: null,
       cartel: { foto: "img/carteles/j04.jpg", encuadre: "15% 50%" } },
     { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA", resultado: null,

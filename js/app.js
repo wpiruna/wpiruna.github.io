@@ -162,7 +162,8 @@
             <span>${DIAS_CORTOS[n.day.getDay()].toUpperCase()} ${n.day.getDate()}·${n.day.getMonth() + 1} · ${esc(timeText(n)).toUpperCase()}${n.piscina ? " · " + esc(n.piscina).toUpperCase() : ""}</span>
             ${haChip(n)}
           </span>
-        </button>`;
+        </button>${n.convocatoria ? `
+        <a class="btn btn-ghost convoc-link" href="#partido-${n.id}">Ver convocatoria</a>` : ""}`;
       cd.hidden = false;
       const tick = () => {
         const today = startOfDay(now());
@@ -562,6 +563,9 @@
     if (p.cronica) {
       const paras = String(p.cronica.texto || "").split(/\n\s*\n/).filter(Boolean);
       body += `<h3>Crónica</h3><div class="cronica">${p.cronica.titulo ? `<h4>${esc(p.cronica.titulo)}</h4>` : ""}${paras.map((t) => `<p>${esc(t)}</p>`).join("")}</div>`;
+    }
+    if (p.convocatoria) {
+      body += `<h3>Convocatoria</h3><img class="convoc" src="${esc(p.convocatoria)}" alt="Convocatoria del Iruña para este partido" loading="lazy">`;
     }
     if (!p.played && !p.nota) {
       body += `<p class="empty">${p.home ? "Jugamos en casa: ¡a llenar la grada!" : `Partido fuera, en la piscina de ${esc(T[p.local].nombre)}.`}${p.hora ? "" : " La hora se confirmará en los días previos."}</p>`;

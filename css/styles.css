@@ -632,6 +632,9 @@ dialog { color: var(--text); }
 .ct-info div span { font-family: var(--font); font-size: max(3cqw, 12px); color: #a9b8d6; }
 .ct-ha { flex: none; font-size: max(3cqw, 11px); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 1.5cqw 3cqw; border-radius: 6px; border: 1.5px solid var(--sky); color: var(--sky); }
 .cartel.home .ct-ha { background: var(--ball); border-color: var(--ball); color: var(--sky-ink); }
+/* Convocatoria (imagen vertical) en la ficha y enlace en Inicio */
+.convoc { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; border-radius: 12px; border: 1px solid var(--line); }
+.convoc-link { display: flex; justify-content: center; margin-top: 10px; }
 /* Enlace a Google Maps de la piscina */
 .map-link { color: inherit; text-decoration: underline; text-decoration-color: rgba(43, 200, 255, .55); text-underline-offset: 3px; }
 .map-link:hover { color: var(--sky); }
