@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-160 -175 320 320">
+  <!-- Silueta genérica para quien aún no tiene cabezón: hombros, cabeza y gorro rojo de portero -->
+  <path d="M-150 145 C-140 70 -90 45 -40 38 L40 38 C90 45 140 70 150 145 Z" fill="#33466e"/>
+  <rect x="-30" y="0" width="60" height="50" rx="18" fill="#3c5180"/>
+  <ellipse cx="0" cy="-45" rx="78" ry="88" fill="#4a6196"/>
+  <path d="M-80 -40 C-82 -120 -40 -140 0 -140 C40 -140 82 -120 80 -40 C55 -62 30 -70 0 -70 C-30 -70 -55 -62 -80 -40 Z" fill="#e8323c"/>
+  <circle cx="-78" cy="-30" r="22" fill="#e8323c"/>
+  <circle cx="78" cy="-30" r="22" fill="#e8323c"/>
+  <circle cx="-78" cy="-30" r="11" fill="#b8222b"/>
+  <circle cx="78" cy="-30" r="11" fill="#b8222b"/>
+</svg>

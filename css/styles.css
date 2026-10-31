@@ -655,6 +655,9 @@ dialog { color: var(--text); }
 .scorers .balls { color: var(--ball); letter-spacing: 1px; font-size: .72rem; margin-right: 8px; }
 .cronica h4 { font-family: var(--display); font-size: 1.35rem; font-weight: 700; margin: 0 0 10px; line-height: 1.15; }
 .cronica p { margin: 0 0 12px; color: #c3cee4; line-height: 1.65; max-width: 65ch; }
+.cronica-video { margin: 4px 0 16px; max-width: 480px; }
+.cronica-video video { display: block; width: 100%; aspect-ratio: 1; border-radius: var(--radius-sm); border: 1px solid var(--line-2); background: #000; }
+.cronica-video figcaption { margin-top: 6px; font-size: .8rem; color: var(--muted); }
 .md-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
 .md-actions .btn { flex: 1 1 180px; justify-content: center; }
 

@@ -17,6 +17,8 @@
  *   goleadores  opcional: [{ nombre: "Jon", goles: 3 }]
  *   stats       opcional: enlace a las estadísticas del partido
  *   cronica     opcional: { titulo: "...", texto: "párrafo 1\n\npárrafo 2" }
+ *               video opcional dentro de cronica: { archivo: "video/xxx.mp4", poster: "video/xxx.jpg", despues: 3, pie: "..." }
+ *               (sale en bucle y sin sonido tras el párrafo número `despues`)
  *   nota        opcional: aviso que se muestra en la ficha
  *   cartel      opcional: cartel de la ficha con foto
  *               { foto: "img/carteles/j01.jpg", encuadre: "50% 40%", lema: "¡A llenar la grada!" }
@@ -85,13 +87,14 @@ window.DATOS = {
     { id: "julen",    apodo: "Julen",    pj: 3, goles: 11, penMarcados: 0, penFallados: 1, penCometidos: 1, rojas: 0, manzanadasExtra: 2 },
     { id: "reclu",    apodo: "Reclu",    pj: 4, goles: 1, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
     { id: "rafa",     apodo: "Rafa",     pj: 4, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
-    { id: "juli1",    apodo: "Juli I",   pj: 5, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0, manzanadasExtra: 1 },
+    { id: "juli1",    apodo: "Juli I",   pj: 5, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0, manzanadasExtra: 2 },
     { id: "bartu",    apodo: "Bartu",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "labairu",  apodo: "Labairu",  pj: 5, goles: 7, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
     { id: "borja",    apodo: "Borja",    pj: 4, goles: 5, penMarcados: 1, penFallados: 0, penCometidos: 3, rojas: 0 },
     { id: "murua",    apodo: "Murua",    pj: 5, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0, manzanadasExtra: 1 },
     { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "echandi",  apodo: "Echandi",  pj: 4, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 }
+    { id: "echandi",  apodo: "Echandi",  pj: 4, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "olabe",    apodo: "Olabe",    pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 2 }
   ],
 
   piscinas: {
@@ -157,6 +160,10 @@ window.DATOS = {
         { nombre: "Ángel", goles: 2 }, { nombre: "Labairu", goles: 2 }, { nombre: "Rafa", goles: 1 }
       ],
       stats: "https://clupik.pro/es/tournament/1343463/match/145658073/results",
+      cronica: { titulo: "Lautada 10, Iruña 18: una parte de cine y otra de manzanas",
+                 texto: "Víspera de Halloween en Mendizorrotza, y el Iruña salió disfrazado de equipo serio. Rafa estrenó el marcador en el primer minuto, Labairu hizo el 0-2 y el primer cuarto se cerró 3-5. En el segundo, el disfraz nos quedaba todavía mejor: parcial de 1-6, 4-11 al descanso y seis de ocho superioridades dentro. Un waterpolo de los que se enseñan en los cursillos.\n\nLo de Julen merece párrafo propio: siete goles. En el segundo cuarto falló un penalti y, cuatro segundos después, la metió igual, como si el portero no le hubiera parado nada. Tras él, Tainta e Iglesias con tres cada uno (Iglesias firmó el 10-18 final), Ángel y Labairu con dos, y Rafa. Atrás, Larry volvió bajo los palos con el dedo ya en su sitio, y Lautada solo sacó una de sus cinco superioridades.\n\nAhora, en honor a la verdad: entraba un sol que rebotaba en el agua y dejaba a más de uno jugando a ciegas. Es la mejor excusa que tenemos para lo que vino después, y pensamos usarla. Porque tras el descanso, con el partido ya encarrilado, abrió el mercado de las manzanas. Aquí va el resumen del tercer y el cuarto cuarto:\n\nLa jugada de la tarde fue de Juan Olabe: se quedó solo delante del portero, amagó una vez, amagó otra, siguió amagando hasta que el sol cambió de sitio… y falló. El vestuario, que no perdona, le cuelga dos manzanas por la jugada. Juli I tampoco quiso quedarse fuera de la foto: dos veces se vio en el 5 con un compañero esperando el pase de gol, y las dos decidió que lo suyo era tirar. Mal, además. Manzana al canto, y de propina regaló el penalti del 8-16. Resultado: la segunda parte la ganamos 7-6, que en el Iruña viene a ser casi un empate moral.\n\nTercera victoria, 9 puntos y quintos en la tabla. Julen sale de Vitoria como máximo goleador del equipo y, con el penalti fallado, empatado con Tainta en lo más alto del Manzano del año. Así es el Iruña: lo que da con una mano, lo quita con la otra. El domingo 8 viene Portugalete a la UPNA, a las 10:30. Que alguien lleve gafas de sol, por si acaso.",
+                 video: { archivo: "video/j04-manzanas.mp4", poster: "video/j04-manzanas.jpg", despues: 3,
+                          pie: "Resumen del 3.º y 4.º cuarto. Dale al sonido 🔊" } },
       cartel: { foto: "img/carteles/j04.jpg", encuadre: "15% 50%" } },
     { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA", resultado: null,
       cartel: { foto: "img/carteles/j05.jpg", encuadre: "52% 30%" } },

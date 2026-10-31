@@ -562,7 +562,9 @@
     }
     if (p.cronica) {
       const paras = String(p.cronica.texto || "").split(/\n\s*\n/).filter(Boolean);
-      body += `<h3>Crónica</h3><div class="cronica">${p.cronica.titulo ? `<h4>${esc(p.cronica.titulo)}</h4>` : ""}${paras.map((t) => `<p>${esc(t)}</p>`).join("")}</div>`;
+      const v = p.cronica.video;
+      const clip = v ? `<figure class="cronica-video"><video src="${esc(v.archivo)}"${v.poster ? ` poster="${esc(v.poster)}"` : ""} autoplay muted loop playsinline controls preload="metadata"></video>${v.pie ? `<figcaption>${esc(v.pie)}</figcaption>` : ""}</figure>` : "";
+      body += `<h3>Crónica</h3><div class="cronica">${p.cronica.titulo ? `<h4>${esc(p.cronica.titulo)}</h4>` : ""}${paras.map((t, i) => `<p>${esc(t)}</p>${v && i + 1 === v.despues ? clip : ""}`).join("")}</div>`;
     }
     if (p.convocatoria) {
       body += `<h3>Convocatoria</h3><img class="convoc" src="${esc(p.convocatoria)}" alt="Convocatoria del Iruña para este partido" loading="lazy">`;
