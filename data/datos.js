@@ -177,7 +177,7 @@ window.DATOS = {
       cronica: { titulo: "Larry, estelar en Askartza: 12-3 y a por Lauro",
                  texto: "Domingo, 10:30 de la mañana, y enfrente el Askartza B: joven, rápido y con dos victorias en el bolsillo. El Iruña llegaba con la enfermería llena y el banquillo corto, sin Juli II, Julen ni Aritz, con Rafa tocado del hombro e Iglesias de la espalda. Y aun así el primero en celebrar fue Beor, que a los 32 segundos ya había puesto el 0-1. Ese ratito de liderato no nos lo quita nadie.\n\nDuró lo que duró. Askartza le dio la vuelta en el último minuto y medio del primer cuarto (3-1) y a partir de ahí impuso piernas y ritmo: ocho goles seguidos hasta el 8-1 del tercer cuarto, cuando Eguilaz cortó la sangría con el 8-2. Desde ese momento el partido fue suyo, y no hay que darle más vueltas.\n\nLo que sí hay que contar es lo de Larry. Askartza tiró seis penaltis y marcó uno. Jugó siete superioridades y marcó una. Y por en medio, un uno contra uno tras otro que Larry fue sacando con una mano, con la otra y con lo que hiciera falta. Sin él, el marcador habría sido de otro deporte. En el último cuarto se le salió un dedo y tuvo que dejar el agua; entró Iglesias, con su espalda dolorida y el gorro 13, a defender la portería. Eso es tener equipo.\n\nEl resto del parte: estreno de Echandi con el Iruña, expulsión de bautismo incluida, y una mañana completita de Tainta, que falló un penalti, cometió otro y marcó el 12-3 quince segundos después del tiempo muerto de Miriam. Con eso y los tres penaltis que cometió Borja, los dos se reparten el liderato del Manzano del año. El vestuario, además, le apunta una manzanada a Reclu por fallar una clarísima de esas que no se fallan. Y ahora, hielo para el dedo de Larry, paciencia para la espalda de Iglesias y la mirada en Loiu: a las tres toca Lauro, y ese es el partido que de verdad había que ganar hoy.\n\nÚltima hora: buenas noticias desde la enfermería. Lo de Larry no es rotura, solo se le salió la falange del meñique. Ya está mejor y pronto lo tendremos de vuelta bajo los palos." },
       cartel: { foto: "img/carteles/j06.jpg", encuadre: "25% 50%" } },
-    { id: "p07", fecha: "2026-11-22", hora: "11:00", local: "iruna",    visitante: "larraina", piscina: "UPNA", resultado: null },
+    { id: "p07", fecha: "2026-11-21", hora: "18:00", local: "iruna",    visitante: "larraina", piscina: "UPNA", resultado: null },
     { id: "p08", fecha: "2027-02-13", hora: "13:25", local: "leioa",    visitante: "iruna",    piscina: "Sakoneta Kiroldegia", resultado: null },
     { id: "p09", fecha: "2026-12-06", hora: "11:00", local: "iruna",    visitante: "urgara",   piscina: "UPNA", resultado: null },
     { id: "p10", fecha: "2026-12-13", hora: "11:00", local: "iruna",    visitante: "donosti",  piscina: "UPNA", resultado: null },
@@ -188,8 +188,8 @@ window.DATOS = {
       nota: "Adelantado del 30 de enero. Doble jornada en Bizkaia: Bilbao por la mañana y Sestao por la tarde." },
     { id: "p13", fecha: "2027-01-09", hora: "20:15", local: "sestao", visitante: "iruna", piscina: "Polideportivo Las Llanas", resultado: null,
       nota: "Adelantado del 16 de enero. Doble jornada en Bizkaia: Bilbao por la mañana y Sestao por la tarde." },
-    { id: "p14", fecha: "2027-01-24", hora: "11:00", local: "iruna",    visitante: "lauro",    piscina: "UPNA", resultado: null },
-    { id: "p15", fecha: "2027-02-07", hora: "11:00", local: "iruna",    visitante: "lautada",  piscina: "UPNA", resultado: null },
+    { id: "p14", fecha: "2027-01-24", hora: "12:00", local: "iruna",    visitante: "lauro",    piscina: "UPNA", resultado: null },
+    { id: "p15", fecha: "2027-02-07", hora: "12:00", local: "iruna",    visitante: "lautada",  piscina: "UPNA", resultado: null },
     { id: "p16", fecha: "2027-02-13", hora: "18:00", local: "np",       visitante: "iruna",    piscina: "P.M. Muelle de Txurruka", resultado: null },
     { id: "p17", fecha: "2027-02-21", hora: "11:00", local: "iruna",    visitante: "askartza", piscina: "UPNA", resultado: null },
     { id: "p18", fecha: "2027-02-27", hora: null, local: "larraina", visitante: "iruna",    piscina: "C.D. Larraina", resultado: null },
@@ -218,7 +218,7 @@ window.DATOS = {
     { n: 2, fecha: "2026-10-17", partidos: [
       { local: "cdb",     visitante: "leioa",   lugar: "Club Deportivo Bilbao", fecha: "2026-10-16", hora: "21:00", resultado: { local: 9, visitante: 15 } },
       { id: "p02" },
-      { local: "sestao",  visitante: "donosti", lugar: "Polideportivo Las Llanas", fecha: "2027-01-23", hora: null, resultado: null },
+      { local: "sestao",  visitante: "donosti", lugar: "Polideportivo Las Llanas", fecha: "2027-01-24", hora: "13:15", resultado: null },
       { local: "urgara",  visitante: "urbatb",  lugar: "Azken Portu Kiroldegia", hora: "18:15", resultado: { local: 10, visitante: 14 } },
       { local: "np",      visitante: "askartza", lugar: "P.M. Muelle de Txurruka", hora: "17:00", resultado: { local: 12, visitante: 14 } },
       { local: "lautada", visitante: "larraina", lugar: "Complejo Deportivo Mendizorrotza", fecha: "2026-10-18", hora: "12:30", resultado: { local: 6, visitante: 13 } }
@@ -321,7 +321,7 @@ window.DATOS = {
     ] },
     { n: 15, fecha: "2027-02-06", partidos: [
       { local: "larraina", visitante: "askartza", lugar: "C.D. Larraina", hora: "16:30", resultado: null },
-      { local: "sestao",  visitante: "urgara",  lugar: "Polideportivo Las Llanas", hora: null, resultado: null },
+      { local: "sestao",  visitante: "urgara",  lugar: "Polideportivo Las Llanas", fecha: "2027-02-14", hora: "13:15", resultado: null },
       { local: "leioa",   visitante: "np",      lugar: "Sakoneta Kiroldegia", hora: null, resultado: null },
       { local: "urbatb",  visitante: "lauro",   lugar: "Orbea Kiroldegia", fecha: "2027-02-05", hora: "21:15", resultado: null },
       { local: "donosti", visitante: "cdb",     lugar: "Altza Kiroldegia", hora: null, resultado: null },
