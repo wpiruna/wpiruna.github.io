@@ -75,22 +75,22 @@ window.DATOS = {
    * Cara de cada jugador: img/plantilla/<id>.svg (cabezones de los Iruña Toons).
    */
   plantilla: [
-    { id: "larry",    apodo: "Larry",    portero: true, pj: 3, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "angel",    apodo: "Ángel",    pj: 5, goles: 6, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "beor",     apodo: "Beor",     pj: 5, goles: 6, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
-    { id: "juli2",    apodo: "Juli II",  pj: 1, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "aritz",    apodo: "Aritz",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "iker",     apodo: "Iker",     pj: 5, goles: 4, penMarcados: 3, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "tainta",   apodo: "Tainta",   pj: 4, goles: 9, penMarcados: 0, penFallados: 1, penCometidos: 2, rojas: 0, manzanadasExtra: 1 },
-    { id: "iglesias", apodo: "Iglesias", pj: 4, goles: 5, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "eguilaz",  apodo: "Eguilaz",  pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "julen",    apodo: "Julen",    pj: 3, goles: 11, penMarcados: 0, penFallados: 1, penCometidos: 1, rojas: 0, manzanadasExtra: 2 },
+    { id: "larry",    apodo: "Larry",    portero: true, pj: 4, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "angel",    apodo: "Ángel",    pj: 6, goles: 6, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 1, manzanadasExtra: 1 },
+    { id: "beor",     apodo: "Beor",     pj: 6, goles: 7, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
+    { id: "juli2",    apodo: "Juli II",  pj: 2, goles: 6, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "aritz",    apodo: "Aritz",    pj: 1, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "iker",     apodo: "Iker",     pj: 6, goles: 4, penMarcados: 3, penFallados: 0, penCometidos: 1, rojas: 0 },
+    { id: "tainta",   apodo: "Tainta",   pj: 5, goles: 9, penMarcados: 0, penFallados: 1, penCometidos: 2, rojas: 0, manzanadasExtra: 1 },
+    { id: "iglesias", apodo: "Iglesias", pj: 5, goles: 7, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
+    { id: "eguilaz",  apodo: "Eguilaz",  pj: 2, goles: 2, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 1 },
+    { id: "julen",    apodo: "Julen",    pj: 4, goles: 15, penMarcados: 1, penFallados: 1, penCometidos: 1, rojas: 0, manzanadasExtra: 2 },
     { id: "reclu",    apodo: "Reclu",    pj: 4, goles: 1, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
-    { id: "rafa",     apodo: "Rafa",     pj: 4, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
+    { id: "rafa",     apodo: "Rafa",     pj: 5, goles: 3, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0, manzanadasExtra: 1 },
     { id: "juli1",    apodo: "Juli I",   pj: 5, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 1, rojas: 0, manzanadasExtra: 2 },
     { id: "bartu",    apodo: "Bartu",    pj: 1, goles: 1, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
-    { id: "labairu",  apodo: "Labairu",  pj: 5, goles: 7, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
-    { id: "borja",    apodo: "Borja",    pj: 4, goles: 5, penMarcados: 1, penFallados: 0, penCometidos: 3, rojas: 0 },
+    { id: "labairu",  apodo: "Labairu",  pj: 6, goles: 7, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0 },
+    { id: "borja",    apodo: "Borja",    pj: 5, goles: 7, penMarcados: 1, penFallados: 0, penCometidos: 4, rojas: 0 },
     { id: "murua",    apodo: "Murua",    pj: 5, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 2, rojas: 0, manzanadasExtra: 1 },
     { id: "txema",    apodo: "Txema",    pj: 0, goles: 0, penMarcados: 0, penFallados: 0, penCometidos: 0, rojas: 0 },
     { id: "echandi",  apodo: "Echandi",  pj: 4, goles: 2, penMarcados: 1, penFallados: 0, penCometidos: 0, rojas: 0 },
@@ -165,7 +165,16 @@ window.DATOS = {
                  video: { archivo: "video/j04-manzanas.mp4", poster: "video/j04-manzanas.jpg", despues: 3,
                           pie: "Resumen del 3.º y 4.º cuarto. Dale al sonido 🔊" } },
       cartel: { foto: "img/carteles/j04.jpg", encuadre: "15% 50%" } },
-    { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA", resultado: null,
+    { id: "p05", fecha: "2026-11-08", hora: "10:30", local: "iruna",    visitante: "np",       piscina: "UPNA",
+      resultado: { local: 13, visitante: 18 },
+      parciales: [[4,5],[4,4],[3,7],[2,2]],
+      goleadores: [
+        { nombre: "Julen", goles: 4 }, { nombre: "Juli II", goles: 3 }, { nombre: "Borja", goles: 2 },
+        { nombre: "Iglesias", goles: 2 }, { nombre: "Beor", goles: 1 }, { nombre: "Eguilaz", goles: 1 }
+      ],
+      stats: "https://clupik.pro/es/tournament/1343463/match/145658078/results",
+      cronica: { titulo: "Iruña 13, Portugalete 18: se plantó cara hasta el final",
+                 texto: "Domingo, 10:30, y enfrente uno de los cocos de la liga: el Portugalete, el ataque más goleador del campeonato, con 85 goles en cuatro partidos. El Iruña salió sin complejos. Julen abrió de penalti a los 17 segundos y Beor hizo el 2-0 antes del primer minuto. Eguilaz volvió a ponernos por delante (3-2), Juli II empató a cuatro y solo un gol de Pocero a 17 segundos de la bocina dejó el primer cuarto en 4-5.\n\nFue un partido de mucho nivel, de los que se juegan con los dientes apretados. Portugalete apretó en el segundo cuarto hasta el 4-7 y el Iruña respondió con carácter: Iglesias, Borja por partida doble y Julen, a siete segundos del descanso, dejaron el 8-9. En el tercero, más de lo mismo. Cada vez que se iban, volvíamos: Julen puso el 9-11, Iglesias el 10-12 y Juli II el 11-12 a falta de 1:41.\n\nAhí se rompió el partido. En el último minuto y medio del tercer cuarto, el Portugalete metió cuatro goles seguidos, dos de Sanado, uno de De Lucas y otro de Riol a un segundo de la bocina, con la tercera exclusión de Beor por en medio, y se fue al último cuarto con 11-16. Es lo que tiene un equipo tan potente: te perdona poco. Nos pitaron doce exclusiones, sacaron cuatro de esas superioridades, y Riol y De Lucas, con cuatro goles cada uno, castigaron cada despiste.\n\nPero este equipo no sabe bajar los brazos. El último cuarto acabó 2-2, con Juli II y Julen cerrando el 13-18. Julen se fue a cuatro goles, Juli II a tres, y Borja e Iglesias a dos. Y un dato que dice mucho del trabajo atrás: Barcina, su máximo goleador de la liga, se fue de la UPNA sin marcar.\n\nEso sí, el Manzano no descansa ni en los días de pelea. Las estadísticas dejan dos rojas, a Eguilaz y a Ángel, y los penaltis cometidos de Borja e Iker. El vestuario, además, le cuelga a Ángel una manzanada extra por estrellarla en el larguero a un metro y con la portería vacía. Y aquí viene lo gordo, porque hoy hemos asistido a una remontada histórica. Ángel llegó a la UPNA con el expediente inmaculado: cero manzanadas en cinco partidos, el ejemplo que se pone a los cadetes. En 32 minutos ha pasado de no tener ninguna a ser líder en solitario del Manzano del año, con seis, por delante de Tainta, Julen y Eguilaz. Ni en el Bernabéu se recuerdan remontadas así. Desde hoy, el vestuario ya sabe a quién mirar cuando caiga la primera manzana.\n\nY para acabar, lo más importante: desde la grada, la afición sale muy orgullosa de este equipo. Por la cara que se le plantó a un rival tan potente, por lo que se peleó cada balón hasta el último segundo y porque, en muchas fases del partido, en la UPNA se vio waterpolo de muy alto nivel. Así se pierde con la cabeza bien alta. Seguimos sextos, con 9 puntos, y con muchas ganas de más. El sábado 21 toca derbi: Larraina, en la UPNA, a las 18:00." },
       cartel: { foto: "img/carteles/j05.jpg", encuadre: "52% 30%" },
       convocatoria: "img/convocatorias/j05-portugalete.jpg" },
     { id: "p06", fecha: "2026-10-18", hora: "10:30", local: "askartza", visitante: "iruna",    piscina: "Claret Askartza Kiroldegia",
@@ -391,15 +400,15 @@ window.DATOS = {
    * Ordena las filas por posición. pj, g, e, p, gf, gc, pts.
    */
   clasificacion: {
-    actualizada: "2026-11-07", // p. ej. "2026-10-12"
+    actualizada: "2026-11-08", // p. ej. "2026-10-12"
     filas: [
       { equipo: "askartza", pj: 6, g: 6, e: 0, p: 0, gf: 91, gc: 39, pts: 18 },
       { equipo: "urbatb",   pj: 5, g: 5, e: 0, p: 0, gf: 65, gc: 38, pts: 15 },
+      { equipo: "np",       pj: 5, g: 4, e: 0, p: 1, gf: 103, gc: 55, pts: 12 },
       { equipo: "donosti",  pj: 5, g: 4, e: 0, p: 1, gf: 73, gc: 41, pts: 12 },
-      { equipo: "np",       pj: 4, g: 3, e: 0, p: 1, gf: 85, gc: 42, pts: 9 },
       { equipo: "leioa",    pj: 5, g: 3, e: 0, p: 2, gf: 75, gc: 66, pts: 9 },
+      { equipo: "iruna",    pj: 6, g: 3, e: 0, p: 3, gf: 77, gc: 73, pts: 9 },
       { equipo: "larraina", pj: 5, g: 3, e: 0, p: 2, gf: 58, gc: 68, pts: 9 },
-      { equipo: "iruna",    pj: 5, g: 3, e: 0, p: 2, gf: 64, gc: 55, pts: 9 },
       { equipo: "sestao",   pj: 5, g: 2, e: 0, p: 3, gf: 70, gc: 55, pts: 6 },
       { equipo: "lauro",    pj: 5, g: 1, e: 0, p: 4, gf: 47, gc: 68, pts: 3 },
       { equipo: "lautada",  pj: 5, g: 0, e: 0, p: 5, gf: 39, gc: 82, pts: 0 },
