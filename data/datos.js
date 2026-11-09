@@ -187,10 +187,13 @@ window.DATOS = {
       cronica: { titulo: "Larry, estelar en Askartza: 12-3 y a por Lauro",
                  texto: "Domingo, 10:30 de la mañana, y enfrente el Askartza B: joven, rápido y con dos victorias en el bolsillo. El Iruña llegaba con la enfermería llena y el banquillo corto, sin Juli II, Julen ni Aritz, con Rafa tocado del hombro e Iglesias de la espalda. Y aun así el primero en celebrar fue Beor, que a los 32 segundos ya había puesto el 0-1. Ese ratito de liderato no nos lo quita nadie.\n\nDuró lo que duró. Askartza le dio la vuelta en el último minuto y medio del primer cuarto (3-1) y a partir de ahí impuso piernas y ritmo: ocho goles seguidos hasta el 8-1 del tercer cuarto, cuando Eguilaz cortó la sangría con el 8-2. Desde ese momento el partido fue suyo, y no hay que darle más vueltas.\n\nLo que sí hay que contar es lo de Larry. Askartza tiró seis penaltis y marcó uno. Jugó siete superioridades y marcó una. Y por en medio, un uno contra uno tras otro que Larry fue sacando con una mano, con la otra y con lo que hiciera falta. Sin él, el marcador habría sido de otro deporte. En el último cuarto se le salió un dedo y tuvo que dejar el agua; entró Iglesias, con su espalda dolorida y el gorro 13, a defender la portería. Eso es tener equipo.\n\nEl resto del parte: estreno de Echandi con el Iruña, expulsión de bautismo incluida, y una mañana completita de Tainta, que falló un penalti, cometió otro y marcó el 12-3 quince segundos después del tiempo muerto de Miriam. Con eso y los tres penaltis que cometió Borja, los dos se reparten el liderato del Manzano del año. El vestuario, además, le apunta una manzanada a Reclu por fallar una clarísima de esas que no se fallan. Y ahora, hielo para el dedo de Larry, paciencia para la espalda de Iglesias y la mirada en Loiu: a las tres toca Lauro, y ese es el partido que de verdad había que ganar hoy.\n\nÚltima hora: buenas noticias desde la enfermería. Lo de Larry no es rotura, solo se le salió la falange del meñique. Ya está mejor y pronto lo tendremos de vuelta bajo los palos." },
       cartel: { foto: "img/carteles/j06.jpg", encuadre: "25% 50%" } },
-    { id: "p07", fecha: "2026-11-21", hora: "18:00", local: "iruna",    visitante: "larraina", piscina: "UPNA", resultado: null },
+    { id: "p07", fecha: "2026-11-21", hora: "18:00", local: "iruna",    visitante: "larraina", piscina: "UPNA", resultado: null,
+      cartel: { foto: "img/carteles/j06.jpg", encuadre: "25% 50%", lema: "El derbi\nse queda en casa" } },
     { id: "p08", fecha: "2027-02-13", hora: "13:25", local: "leioa",    visitante: "iruna",    piscina: "Sakoneta Kiroldegia", resultado: null },
-    { id: "p09", fecha: "2026-12-06", hora: "11:00", local: "iruna",    visitante: "urgara",   piscina: "UPNA", resultado: null },
-    { id: "p10", fecha: "2026-12-13", hora: "11:00", local: "iruna",    visitante: "donosti",  piscina: "UPNA", resultado: null },
+    { id: "p09", fecha: "2026-12-06", hora: "11:00", local: "iruna",    visitante: "urgara",   piscina: "UPNA", resultado: null,
+      cartel: { foto: "img/carteles/j03-manzanos.jpg", encuadre: "50% 30%", lema: "No seáis manzanos\ny no os confiéis" } },
+    { id: "p10", fecha: "2026-12-13", hora: "11:00", local: "iruna",    visitante: "donosti",  piscina: "UPNA", resultado: null,
+      cartel: { foto: "img/carteles/j10.jpg", encuadre: "55% 40%" } },
     { id: "p11", fecha: "2027-02-12", hora: "21:15", local: "urbatb",   visitante: "iruna",    piscina: "Orbea Kiroldegia", resultado: null },
 
     // ---------- 2ª VUELTA ----------
@@ -203,7 +206,8 @@ window.DATOS = {
     { id: "p16", fecha: "2027-02-13", hora: "18:00", local: "np",       visitante: "iruna",    piscina: "P.M. Muelle de Txurruka", resultado: null },
     { id: "p17", fecha: "2027-02-21", hora: "11:00", local: "iruna",    visitante: "askartza", piscina: "UPNA", resultado: null },
     { id: "p18", fecha: "2027-02-27", hora: null, local: "larraina", visitante: "iruna",    piscina: "C.D. Larraina", resultado: null },
-    { id: "p19", fecha: "2026-11-14", hora: "15:45", local: "iruna",    visitante: "leioa",    piscina: "UPNA", resultado: null },
+    { id: "p19", fecha: "2026-11-14", hora: "15:45", local: "iruna",    visitante: "leioa",    piscina: "UPNA", resultado: null,
+      cartel: { foto: "img/carteles/j01.jpg", encuadre: "45% 45%" } },
     { id: "p20", fecha: "2027-03-13", hora: null, local: "urgara",   visitante: "iruna",    piscina: "Azken Portu Kiroldegia", resultado: null },
     { id: "p21", fecha: "2027-03-20", hora: null, local: "donosti",  visitante: "iruna",    piscina: "Altza Kiroldegia", resultado: null },
     { id: "p22", fecha: "2027-04-11", hora: "11:00", local: "iruna",    visitante: "urbatb",   piscina: "UPNA", resultado: null }
